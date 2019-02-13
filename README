@@ -1,0 +1,21 @@
+Sokoban game in python with simple solver built on David Moreno's sokoban code.
+
+Key         Action
+←↑↓→    Move left, up, down, right
+n/p     Next/previous level
+N/P     Next/previous unsolved level
+>/<     Next/previous world
+q       Quit
+r       Re-start
+s       If no solution, solve from the current state;
+        space   pause solve
+        esc     exit solve
+S       Solve from the initial state, even if a solution exists
+R       Replay solution
+u/U     Undo/Re-do
+
+Debug
+^a      show NO_BOX squares
+^h      print heuristic
+^n      print neighbors
+^s      print solution string
