@@ -1,0 +1,218 @@
+; Title = World 1
+; Author = Zuanxia Deng
+; Transcribed from Sokoban Master for iPad
+
+Level 1
+######
+#.#  #
+#   $#
+#  @ ##
+###   #
+  #   #
+  #####
+;Solution = uurDDlddrruLdlUUruLLdlU
+;Solution_info = 2019-02-05 17:49:05, solution with cost = 23 found in 4.0ms after examining 18 states.
+
+Level 2
+######
+#.   #
+#    #
+#  #$##
+#@    #
+##    #
+ ######
+;Solution = uurrrDullddrdrruLLdlUUUruL
+;Solution_info = 2019-02-05 17:49:05, solution with cost = 26 found in 4.2ms after examining 18 states.
+
+Level 3
+#######
+#.# @ #
+#     #
+# # ###
+# $   #
+###   #
+  #####
+;Solution = dlllddRRdrruLdlUUdlluurRurrdLLLrddlluU
+;Solution_info = 2019-02-05 17:49:05, solution with cost = 38 found in 6.9ms after examining 15 states.
+
+Level 4
+###
+#.####
+# .  ##
+# $ $ #
+###   #
+  ## @#
+   ####
+;Solution = ulluulldRurrDrddlUlUdrruLuLLdlUrrrddlUruL
+;Solution_info = 2019-02-05 17:49:05, solution with cost = 41 found in 17ms after examining 37 states.
+
+Level 5
+####
+#  #####
+#@ ##  #
+#      #
+##$.#  #
+ #     #
+ ##  ###
+  ####
+;Solution = drrddlUUluurDldRRRlddrruruulDDrdLLdlU
+;Solution_info = 2019-02-05 17:49:05, solution with cost = 37 found in 7.0ms after examining 19 states.
+
+Level 6
+#####
+#. @#
+# .$##
+# $  #
+##   #
+ #####
+;Solution = ldldRdrruLdlUluurrDLddrruLdlUlU
+;Solution_info = 2019-02-05 17:49:05, solution with cost = 31 found in 10ms after examining 29 states.
+
+Level 7
+ ######
+##  #.#
+#  $@ #
+#   $ #
+# .####
+####
+;Solution = rdLuLulDlddrUluRRRdLulDrrrU
+;Solution_info = 2019-02-05 17:49:05, solution with cost = 27 found in 19ms after examining 40 states.
+
+Level 8
+#######
+#. .  #
+# #   #
+# $$  #
+## @###
+ ####
+;Solution = UruulllddRRUdlluurRdrrdLulullddrdrUruruLLLrrddlU
+;Solution_info = 2019-02-05 17:49:05, solution with cost = 48 found in 25ms after examining 40 states.
+
+Level 9
+ #####
+ #  .#
+##$.@#
+#  $ #
+#   ##
+#####
+;Solution = dLdlluRdrUruullDRddlluRdrUrU
+;Solution_info = 2019-02-05 17:49:05, solution with cost = 28 found in 10ms after examining 29 states.
+
+Level 10
+#######
+#  $@.#
+#  $  #
+### # #
+  #  .#
+  #####
+;Solution = LDlluRRdrrddllUdrruulLulldRRddrruuuLLdRurDlllluRRRdrD
+;Solution_info = 2019-02-05 17:49:05, solution with cost = 53 found in 32ms after examining 61 states.
+
+Level 11
+#######
+#..#  #
+#  $  #
+#@$   #
+####  #
+   ####
+;Solution = urRdrruulDllldRurrrddlUruLLLdRurrddlUruLLdlUdlU
+;Solution_info = 2019-02-05 17:49:05, solution with cost = 47 found in 24ms after examining 48 states.
+
+Level 12
+#######
+#.@#  #
+# .$  #
+# $   #
+####  #
+   ####
+;Solution = dRdrruulDllldRurrrddlUruLLLdlUrdRurrddlUruLL
+;Solution_info = 2019-02-05 17:49:05, solution with cost = 44 found in 21ms after examining 44 states.
+
+Level 13
+  #####
+ ## @ #
+## $$ #
+#    ##
+#.. ##
+#####
+;Solution = lDurrdLdLruulDlDurrdLdLruulD
+;Solution_info = 2019-02-05 17:49:05, solution with cost = 28 found in 4.5ms after examining 11 states.
+
+Level 14
+   ####
+  ##  #
+  # $ #
+### $@#
+#. . ##
+######
+;Solution = LruulDlDurrdLdLLrruulD
+;Solution_info = 2019-02-05 17:49:05, solution with cost = 22 found in 2.8ms after examining 8 states.
+
+Level 15
+   ####
+####. #
+#  @  #
+# $$  #
+##. ###
+ #  #
+ ####
+;Solution = lDRddlUUrurrdLulDlluRRdrUdllddrUluurrdLulD
+;Solution_info = 2019-02-05 17:49:05, solution with cost = 42 found in 34ms after examining 54 states.
+
+Level 16
+#######
+# .$  #
+#  $  #
+#   ###
+##. @#
+ #####
+;Solution = lluuuRDrruLLdlddrUluRurrdLLdlluuRDDruruL
+;Solution_info = 2019-02-05 17:49:05, solution with cost = 40 found in 24ms after examining 51 states.
+
+Level 17
+   ####
+ ###  #
+## $$ #
+# @   #
+#.  ###
+#.  #
+#####
+;Solution = rrruulDrdLLdlluRuRDrruulDrdLLulDlddrrULuurrdLulDDrdL
+;Solution_info = 2019-02-05 17:49:05, solution with cost = 52 found in 41ms after examining 93 states.
+
+Level 18
+ #######
+##.#  @#
+#  #$  #
+#   $. #
+# .$   #
+########
+;Solution = dddllLuRdrUlllldRRurrruulDrdLLLdlUUdrrruulDrddLLuR
+;Solution_info = 2019-02-05 17:49:06, solution with cost = 50 found in 410ms after examining 357 states.
+
+Level 19
+########
+# ..   #
+#      #
+#   #  #
+#.$    #
+#$$#   #
+#@ #   #
+########
+;Solution = UURlddrUUUUlDrdRRdrUUUruLL
+;Solution_info = 2019-02-05 17:49:07, solution with cost = 26 found in 1.4s after examining 1086 states.
+
+Level 20
+#####
+#   #
+#.  #
+#  .#
+##$ #
+# $.#
+#  $#
+#@  #
+#   #
+#####
+;Solution = rrUUUddlluRUUluurrdL
+;Solution_info = 2019-02-05 17:49:07, solution with cost = 20 found in 27ms after examining 54 states.
+

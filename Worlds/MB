@@ -1,0 +1,1914 @@
+; Title = Microban
+; Author = David W Skinner
+; URL = http://www.sourcecode.se/sokoban/levels
+
+####
+# .#
+#  ###
+#*@  #
+#  $ #
+#  ###
+####
+; 1
+;Solution = dlUrrrdLullddrUluRuulDrddrruLdlUU
+;Solution_info = 2019-02-07 10:29:56, solution with cost = 33 found in 13ms after examining 28 states.
+
+######
+#    #
+# #@ #
+# $* #
+# .* #
+#    #
+######
+; 2
+;Solution = rddLruulDuullddR
+;Solution_info = 2019-02-07 10:29:56, solution with cost = 16 found in 4.6ms after examining 14 states.
+
+  ####
+###  ####
+#     $ #
+# #  #$ #
+# . .#@ #
+#########
+; 3
+;Solution = ruuLLLulDrrrrddlUruLLLddllluurRDrdLuuurDD
+;Solution_info = 2019-02-07 10:29:56, solution with cost = 41 found in 62ms after examining 105 states.
+
+########
+#      #
+# .**$@#
+#      #
+#####  #
+    ####
+; 4
+;Solution = ullDLdRuurrdLLrrddlUruL
+;Solution_info = 2019-02-07 10:29:56, solution with cost = 23 found in 110ms after examining 141 states.
+
+ #######
+ #     #
+ # .$. #
+## $@$ #
+#  .$. #
+#      #
+########
+; 5
+;Solution = LuRllDrdRdrruuLLdlUddlluR
+;Solution_info = 2019-02-07 10:30:06, solution with cost = 25 found in 10s after examining 2147 states.
+
+###### #####
+#    ###   #
+# $$     #@#
+# $ #...   #
+#   ########
+#####
+; 6
+;Solution = ulldllllulDulldRRRRRRdrrruullDurrddlLLLulllllddrUluRRRRRRdrrruullDurrddlLLulllllddrUluRRRRRdrrruullDurrddlL
+;Solution_info = 2019-02-05 22:51:15, solution with cost = 107 found in 2.6s after examining 1004 states.
+
+#######
+#     #
+# .$. #
+# $.$ #
+# .$. #
+# $.$ #
+#  @  #
+#######
+; 7
+;Solution = rruuuulLdDrUdrddlUdllUluuR
+;Solution_info = 2019-02-05 22:51:54, solution with cost = 26 found in 39s after examining 3530 states.
+
+  ######
+  # ..@#
+  # $$ #
+  ## ###
+   # #
+   # #
+#### #
+#    ##
+# #   #
+#   # #
+###   #
+  #####
+; 8
+;Solution = llDDDDDDldddrruuLuuuuuuurrdLulDDDDDDlllddrrUdlluurRdddrruuLUUUUUUluRdddddddrddlluUdlluurRdrUUUUUU
+;Solution_info = 2019-02-05 22:51:54, solution with cost = 97 found in 170ms after examining 181 states.
+
+#####
+#.  ##
+#@$$ #
+##   #
+ ##  #
+  ##.#
+   ###
+; 9
+;Solution = urrDulldRdRluurDrDDlUruLdlUruL
+;Solution_info = 2019-02-05 22:51:54, solution with cost = 30 found in 6.1ms after examining 18 states.
+
+      #####
+      #.  #
+      #.# #
+#######.# #
+# @ $ $ $ #
+# # # # ###
+#       #
+#########
+; 10
+;Solution = rddrruuLLrrddrruuuuurrdddLruuullddDLLddrrUUUUddllddlluuRRRlddrruUUdllllddlluuRRRRRlddrruU
+;Solution_info = 2019-02-05 22:51:54, solution with cost = 89 found in 430ms after examining 263 states.
+
+  ######
+  #    #
+  # ##@##
+### # $ #
+# ..# $ #
+#       #
+#  ######
+####
+; 11
+;Solution = ulllddddrrrruLdllluuuurrrdDDrdLLLLullddrUluRdrrrruulDrdLLLUllddrUrrruuruullldD
+;Solution_info = 2019-02-05 22:51:54, solution with cost = 78 found in 190ms after examining 189 states.
+
+#####
+#   ##
+# $  #
+## $ ####
+ ###@.  #
+  #  .# #
+  #     #
+  #######
+; 12
+;Solution = uululldRdRluurDrDDrddlluRuuulldRurDDrrrddllUdlluR
+;Solution_info = 2019-02-05 22:51:54, solution with cost = 49 found in 20ms after examining 42 states.
+
+####
+#. ##
+#.@ #
+#. $#
+##$ ###
+ # $  #
+ #    #
+ #  ###
+ ####
+; 13
+;Solution = rDlDDRddlUUUUruLdddrdrruLLdlUUUlUdrrDDrdLdlUUUruLruL
+;Solution_info = 2019-02-05 22:51:55, solution with cost = 52 found in 1.1s after examining 738 states.
+
+#######
+#     #
+# # # #
+#. $*@#
+#   ###
+#####
+; 14
+;Solution = uulllldddrrUlluurrrrddLLLrrruullDurrddlLdllURRuullD
+;Solution_info = 2019-02-05 22:51:56, solution with cost = 51 found in 9.2ms after examining 22 states.
+
+     ###
+######@##
+#    .* #
+#   #   #
+#####$# #
+    #   #
+    #####
+; 15
+;Solution = DrdddllUUddrruuLuLLLdlluRRRRDrrddllUU
+;Solution_info = 2019-02-05 22:51:56, solution with cost = 37 found in 25ms after examining 47 states.
+
+ ####
+ #  ####
+ #     ##
+## ##   #
+#. .# @$##
+#   # $$ #
+#  .#    #
+##########
+; 16
+;Solution = lddrUdrruLLdlUUUruLLLulDDDrdLuuurrrdrrDLdlUUruLLLulDDDrddllURdrUluuurrrdddrdrruLLdlUUUruLLLulDDDDldR
+;Solution_info = 2019-02-05 22:52:22, solution with cost = 100 found in 27s after examining 3497 states.
+
+#####
+# @ #
+#...#
+#$$$##
+#    #
+#    #
+######
+; 17
+;Solution = rdDullDRddrruLUddlUUddlUU
+;Solution_info = 2019-02-05 22:52:22, solution with cost = 25 found in 50ms after examining 81 states.
+
+#######
+#     #
+#. .  #
+# ## ##
+#  $ #
+###$ #
+  #@ #
+  #  #
+  ####
+; 18
+;Solution = ruuuulllddrRDrUUdllluurrurrdLdddddlUUruuuLulldddrRdrUUdllluuurrdLrurrdL
+;Solution_info = 2019-02-05 22:52:22, solution with cost = 71 found in 130ms after examining 160 states.
+
+########
+#   .. #
+#  @$$ #
+##### ##
+   #  #
+   #  #
+   #  #
+   ####
+; 19
+;Solution = urrDDDlddrUUUUruLLLdRurDDDlddrUUUUlllluRR
+;Solution_info = 2019-02-05 22:52:23, solution with cost = 41 found in 93ms after examining 117 states.
+
+#######
+#     ###
+#  @$$..#
+#### ## #
+  #     #
+  #  ####
+  #  #
+  ####
+; 20
+;Solution = urDDDrrruulLLLrddlddrUUUdrrruullulldRRRlllulldRRRR
+;Solution_info = 2019-02-05 22:52:23, solution with cost = 50 found in 100ms after examining 136 states.
+
+####
+#  ####
+# . . #
+# $$#@#
+##    #
+ ######
+; 21
+;Solution = dllUdlUluurDRddlU
+;Solution_info = 2019-02-05 22:52:23, solution with cost = 17 found in 5.0ms after examining 17 states.
+
+#####
+#   ###
+#. .  #
+#   # #
+## #  #
+ #@$$ #
+ #    #
+ #  ###
+ ####
+; 22
+;Solution = drrruulDLdlUUUluRRdlddrrrdLLdlUUUUruLdddrruruuL
+;Solution_info = 2019-02-05 22:52:23, solution with cost = 47 found in 210ms after examining 178 states.
+
+#######
+#  *  #
+#     #
+## # ##
+ #$@.#
+ #   #
+ #####
+; 23
+;Solution = ruulluRdrdddllUUdrruululldRddrruuruLLrdddlluuRurDDullluR
+;Solution_info = 2019-02-05 22:52:23, solution with cost = 56 found in 28ms after examining 45 states.
+
+# #####
+  #   #
+###$$@#
+#   ###
+#     #
+# . . #
+#######
+; 24
+;Solution = ullDDlddrruLuuurrdLulDDDullddrRuulD
+;Solution_info = 2019-02-05 22:52:23, solution with cost = 35 found in 47ms after examining 95 states.
+
+ ####
+ #  ###
+ # $$ #
+##... #
+#  @$ #
+#   ###
+#####
+; 25
+;Solution = urrdLulluurDldRlddrUrruuLLulD
+;Solution_info = 2019-02-05 22:52:23, solution with cost = 29 found in 77ms after examining 151 states.
+
+ #####
+ # @ #
+ #   #
+###$ #
+# ...#
+# $$ #
+###  #
+  ####
+; 26
+;Solution = drddlUdrddlUUlldRurrddlUruLruuulldRDuurDD
+;Solution_info = 2019-02-05 22:52:23, solution with cost = 41 found in 120ms after examining 148 states.
+
+######
+#   .#
+# ## ##
+#  $$@#
+# #   #
+#.  ###
+#####
+; 27
+;Solution = dlULddlluuuurrrDulllddddrruuLrdrruLuullldDDurRdrUU
+;Solution_info = 2019-02-05 22:52:23, solution with cost = 50 found in 55ms after examining 92 states.
+
+#####
+#   #
+# @ #
+# $$###
+##. . #
+ #    #
+ ######
+; 28
+;Solution = rDulldRddrruLdlUUluurrdDldRuuulDD
+;Solution_info = 2019-02-05 22:52:23, solution with cost = 33 found in 19ms after examining 41 states.
+
+     #####
+     #   ##
+     #    #
+ ######   #
+##     #. #
+# $ $ @  ##
+# ######.#
+#        #
+##########
+; 29
+;Solution = lulldRurrdrrddllllllluuRurrdRRRlllulldRRlllddrrrrrrruUUUddllulldRRRllllllddrrrrrrruUUruuLDDDuuuulldRurDD
+;Solution_info = 2019-02-05 22:52:23, solution with cost = 104 found in 200ms after examining 173 states.
+
+####
+#  ###
+# $$ #
+#... #
+# @$ #
+#   ##
+#####
+; 30
+;Solution = uluurDldddrrUruuLLulD
+;Solution_info = 2019-02-05 22:52:23, solution with cost = 21 found in 46ms after examining 101 states.
+
+  ####
+ ##  #
+##@$.##
+# $$  #
+# . . #
+###   #
+  #####
+; 31
+;Solution = RlDldRRdrruulLulD
+;Solution_info = 2019-02-05 22:52:24, solution with cost = 17 found in 110ms after examining 144 states.
+
+ ####
+##  ###
+#     #
+#.**$@#
+#   ###
+##  #
+ ####
+; 32
+;Solution = ullDullddrUrurrdLLLddrUluRuulDrrrdL
+;Solution_info = 2019-02-05 22:52:24, solution with cost = 35 found in 49ms after examining 74 states.
+
+#######
+#. #  #
+#  $  #
+#. $#@#
+#  $  #
+#. #  #
+#######
+; 33
+;Solution = ulLrrddlLUdLuluurDldDrrrruulLLrddlluUrrdL
+;Solution_info = 2019-02-05 22:52:25, solution with cost = 41 found in 1.5s after examining 709 states.
+
+  ####
+###  ####
+#       #
+#@$***. #
+#       #
+#########
+; 34
+;Solution = drUdrrURlLuurDldRldlluRluRRurD
+;Solution_info = 2019-02-05 22:52:27, solution with cost = 30 found in 1.5s after examining 677 states.
+
+ ####
+##  #
+#. $#
+#.$ #
+#.$ #
+#.$ #
+#. $##
+#   @#
+##   #
+ #####
+; 35
+;Solution = llluuuRDrDLddrruLdlUUruLuluurDrDLrDDlddrruLdlUUUUruLuurDDDDDlddrruLdlUUUUUruL
+;Solution_info = 2019-02-05 23:06:50, solution with cost = 77 found in 860s after examining 18565 states.
+
+####
+#  ############
+# $ $ $ $ $ @ #
+# .....       #
+###############
+; 36
+;Solution = ldlllllllllluurDldRRRRuLLdlluurDldRRurrdRRuLLLLdRRurrdRRuLLLLdRRlulLdllluurDldRRRRluLdlluurDldRRurrrrrrRRdr\
+;Solution_info = 2019-02-06 02:51:42, solution with cost = 158 found in 13ks after examining 66184 states.
+
+      ###
+##### #.#
+#   ###.#
+#   $ #.#
+# $  $  #
+#####@# #
+    #   #
+    #####
+; 37
+;Solution = drruulLuLLdRRRlddrruUUUddlllluullddRRRRRlddrruUUdllullulDldRRRRRlddrruU
+;Solution_info = 2019-02-06 02:51:44, solution with cost = 71 found in 1.3s after examining 628 states.
+
+##########
+#        #
+# ##.### #
+# # $$ . #
+# . @$## #
+#####    #
+    ######
+; 38
+;Solution = llluuurrrdDuurrrrddllLrrrddlllULLrURR
+;Solution_info = 2019-02-06 02:51:44, solution with cost = 37 found in 33ms after examining 64 states.
+
+#####
+#   ####
+# # # .#
+#    $ ###
+### #$.  #
+#   #@   #
+# # ######
+#   #
+#####
+; 39
+;Solution = ruuLLLuullddRluurrdDrrrddlUruLLLuullddRRDDllddrrUUUURRurDllllluurrDullddrRRRdRUddrruL
+;Solution_info = 2019-02-06 02:51:44, solution with cost = 85 found in 130ms after examining 156 states.
+
+ #####
+ #   #
+##   ##
+# $$$ #
+# .+. #
+#######
+; 40
+;Solution = UdlluRuurrdDuLDuulDD
+;Solution_info = 2019-02-06 02:51:44, solution with cost = 20 found in 73ms after examining 131 states.
+
+#######
+#     #
+#@$$$ ##
+#  #...#
+##    ##
+ ######
+; 41
+;Solution = urDurrDLrrddlUruulldRurDllulldRRRdRdlllUluRRurDurD
+;Solution_info = 2019-02-06 02:51:44, solution with cost = 50 found in 69ms after examining 123 states.
+
+   ####
+   #  #
+   #@ #
+####$.#
+#   $.#
+# # $.#
+#    ##
+######
+; 42
+;Solution = rddLLddrUluRUruulDDDlddrUrUUlDldRldlluuRRRuuurD
+;Solution_info = 2019-02-06 02:51:44, solution with cost = 47 found in 310ms after examining 308 states.
+
+     ####
+     # @#
+     #  #
+###### .#
+#   $  .#
+#  $$# .#
+#    ####
+###  #
+  ####
+; 43
+;Solution = dddllLDLdlluRuRRRRdrUUdlllllddrUluRRRRurDllldlddrUUluRRRuuurD
+;Solution_info = 2019-02-06 02:51:47, solution with cost = 61 found in 2.5s after examining 986 states.
+
+#####
+#@$.#
+#####
+; 44
+;Solution = R
+;Solution_info = 2019-02-06 02:51:47, solution with cost = 1 found in 110us after examining 2 states.
+
+######
+#... #
+#  $ #
+# #$##
+#  $ #
+#  @ #
+######
+; 45
+;Solution = luluururrdLulldddrdrruLUUruLdddLdlUUURlddrruU
+;Solution_info = 2019-02-06 02:51:47, solution with cost = 45 found in 140ms after examining 176 states.
+
+ ######
+##    #
+#  ## #
+# # $ #
+#  * .#
+## #@##
+ #   #
+ #####
+; 46
+;Solution = dlluuRuRDrUdlllddrrUdlluururrdLddlluuluururrrDD
+;Solution_info = 2019-02-06 02:51:47, solution with cost = 47 found in 20ms after examining 33 states.
+
+  #######
+###     #
+# $ $   #
+# ### #####
+# @ . .   #
+#   ###   #
+##### #####
+; 47
+;Solution = rrruuulldRRddlllluuRRRurDDullllddrrrRRRdrruLLLLLLrruuurrdLulDDulllldddrrurRlldlluRR
+;Solution_info = 2019-02-06 02:51:47, solution with cost = 83 found in 200ms after examining 185 states.
+
+######
+#  @ #
+#  # ##
+# .#  ##
+# .$$$ #
+# .#   #
+####   #
+   #####
+; 48
+;Solution = rddDLruuullddlddrUUdrrurDrddlUruLLLruuulllddrDrrrddlUruLLruuullD
+;Solution_info = 2019-02-06 02:51:48, solution with cost = 64 found in 700ms after examining 437 states.
+
+######
+# @  #
+# $# #
+# $  #
+# $ ##
+### ####
+ #  #  #
+ #...  #
+ #     #
+ #######
+; 49
+;Solution = lddRldRuluurDDuurrddLDDDldRRluuuuruulldlddRluurDrDDDlddrruLrdrruLdlluuuuulldRurDDD
+;Solution_info = 2019-02-06 02:51:48, solution with cost = 82 found in 540ms after examining 398 states.
+
+  ####
+###  #####
+#  $  @..#
+# $    # #
+### #### #
+  #      #
+  ########
+; 50
+;Solution = llulDDulldRRRurrrrdddlllllUUrurrdLLuLDlluRRRdrrurrdddlllllUUruRRRllldlluRRRR
+;Solution_info = 2019-02-06 02:51:48, solution with cost = 76 found in 150ms after examining 169 states.
+
+####
+#  ###
+#    ###
+#  $*@ #
+### .# #
+  #    #
+  ######
+; 51
+;Solution = rddllulURuLdlluurDldRRurDlddrrruuL
+;Solution_info = 2019-02-06 02:51:49, solution with cost = 34 found in 23ms after examining 52 states.
+
+  ####
+### @#
+#  $ #
+#  *.#
+#  *.#
+#  $ #
+###  #
+  ####
+; 52
+;Solution = ddLruulDlDRllddrUluRddRdrU
+;Solution_info = 2019-02-06 02:51:51, solution with cost = 26 found in 2.0s after examining 1127 states.
+
+ #####
+##. .##
+# * * #
+#  #  #
+# $ $ #
+## @ ##
+ #####
+; 53
+;Solution = rUruuLullDlddRUUdddrruUULrdddlluRdrUU
+;Solution_info = 2019-02-06 02:51:51, solution with cost = 37 found in 270ms after examining 279 states.
+
+      ######
+      #    #
+  ##### .  #
+###  ###.  #
+# $  $  . ##
+# @$$ # . #
+##    #####
+ ######
+; 54
+;Solution = drURuulDrRRRRllllddlluluRRRRRRdrUUdllllddlUluRRRRRdrrUUlDurruulDrdLdlllllddrUluRRR
+;Solution_info = 2019-02-06 02:55:37, solution with cost = 82 found in 230s after examining 10474 states.
+
+########
+# @ #  #
+#      #
+#####$ #
+    #  ###
+ ## #$ ..#
+ ## #  ###
+    ####
+; 55
+;Solution = drrrrddlUdrddlUUruuLLLulldRRRRurDDDlUddRRluuuLLLulldRRRRurDDDldR
+;Solution_info = 2019-02-06 02:55:37, solution with cost = 64 found in 140ms after examining 180 states.
+
+#####
+#   ###
+#  $  #
+##* . #
+ #   @#
+ ######
+; 56
+;Solution = uluLulldRurDrddllURuulD
+;Solution_info = 2019-02-06 02:55:37, solution with cost = 23 found in 7.0ms after examining 22 states.
+
+  ####
+  #  #
+  #@ #
+  #  #
+### ####
+#    * #
+#  $   #
+#####. #
+    ####
+; 57
+;Solution = dddrdrruLLdLUlldRRRluUUruulDDDDldRurrrddlUruLLLdRurDlllluRRR
+;Solution_info = 2019-02-06 02:55:37, solution with cost = 60 found in 110ms after examining 155 states.
+
+####
+#  ####
+#.*$  #
+# .$# #
+## @  #
+ #   ##
+ #####
+; 58
+;Solution = luluurDRDulldRddrruruuLLLrrrddlLdlUrUdrruulL
+;Solution_info = 2019-02-06 02:55:37, solution with cost = 44 found in 72ms after examining 105 states.
+
+############
+#          #
+# ####### @##
+# #         #
+# #  $   #  #
+# $$ #####  #
+###  # # ...#
+  #### #    #
+       ######
+; 59
+;Solution = dlldllulldddlUruRRurrruullllllllddddRRdrUllluuuurrrrrrrrddllllllDRdLururrdLullddrUluRRRRRRurDDDrddlluRdrUUl\
+;Solution_info = 2019-02-06 02:57:40, solution with cost = 180 found in 120s after examining 6924 states.
+
+ #########
+ #       #
+##@##### #
+#  #   # #
+#  #   $.#
+#  ##$##.#
+##$##  #.#
+#   $  #.#
+#   #  ###
+########
+; 60
+;Solution = urrrrrrdddLLulldRRRllDDrddlUUUddLLdlluRRRllUUluurDDDuuuuurrrrrrddDDDuullulldRRRllddrddlUUUddlldlluRRRlluuuu\
+;Solution_info = 2019-02-06 02:58:02, solution with cost = 169 found in 22s after examining 4095 states.
+
+########
+#      #
+# #### #
+# #...@#
+# ###$###
+# #     #
+#  $$ $ #
+####   ##
+   #.###
+   ###
+; 61
+;Solution = lDDlDDrrULdlUruuuruullllldddddrRRdrUUUddlllluuuuurrrrrddLLrdddlluRdrUUdlldlluuuuurrrrrddLdddrruLdlUU
+;Solution_info = 2019-02-06 02:58:04, solution with cost = 100 found in 1.6s after examining 690 states.
+
+   ##########
+####    ##  #
+#  $$$....$@#
+#      ###  #
+#   #### ####
+#####
+; 62
+;Solution = LLLLullDRRRlldLLLrruulDLddlluuRRRRRRllllddlUluRRRRRldLLdlUluRRRR
+;Solution_info = 2019-02-06 02:58:10, solution with cost = 64 found in 5.6s after examining 1816 states.
+
+#####   ####
+#   ##### .#
+#       $  ########
+###  #### .$    @ #
+  #  #  #  ####   #
+  ####  ####  #####
+; 63
+;Solution = llllLLulLLLLLLulldRurDrrrrrrrddlUruLLLLLLLulldRRRddlUruRRRRRurDllllllLulldRRRRRRRRdRUdRRRRRdrruLLLLLL
+;Solution_info = 2019-02-06 02:58:10, solution with cost = 101 found in 270ms after examining 288 states.
+
+ ######
+##    #
+#   $ #
+#  $$ #
+### .#####
+  ##.# @ #
+   #.  $ #
+   #. ####
+   ####
+; 64
+;Solution = ldlluulUluurrrddLLrruulDrdLdddrrurrdLLLdlUUUUruulDDDDDuuuuulldRurDDDDulUruulldRurDDDululldRRurD
+;Solution_info = 2019-02-06 02:58:11, solution with cost = 95 found in 1.4s after examining 792 states.
+
+  ######
+  #    #
+  #  $ #
+ ####$ #
+## $ $ #
+#....# ##
+#     @ #
+##  #   #
+ ########
+; 65
+;Solution = uuuuLrddddlluuRUrDDullddrdrruLLLLdlUruLuRRRuruulDulldRRDrDDuLLddrdrruLLLullddrUluuRRRurDDullddrdrruLLLuuruu\
+;Solution_info = 2019-02-06 03:09:16, solution with cost = 138 found in 670s after examining 16072 states.
+
+   ###
+   #@#
+ ###$###
+##  .  ##
+#  # #  #
+# #   # #
+# #   # #
+# #   # #
+#  # #  #
+## $ $ ##
+ ##. .##
+  #   #
+  #   #
+  #####
+; 66
+;Solution = DDDDDDDDuuuuuulldlddddrdRdRUUUluurDDDDuuuuuurrdrddddldLDLddrUluUUUUUU
+;Solution_info = 2019-02-06 03:09:23, solution with cost = 69 found in 6.4s after examining 1830 states.
+
+#####
+#   ##
+# #  #
+#@$*.##
+##  . #
+ # $# #
+ ##   #
+  #####
+; 67
+;Solution = uurrdDrdLuuullddRRdrrddllUlURuuullddR
+;Solution_info = 2019-02-06 03:09:23, solution with cost = 37 found in 47ms after examining 60 states.
+
+ ####
+ #  ######
+##    $  #
+# .# $   #
+# .#$#####
+# .@ #
+######
+; 68
+;Solution = luuurrrRdrruLLLLLulDDlddrrrUUddllluururRRRdLullldlddrrruUddllluurDuurRdrruLLLulDDurrrrdrruLLLLLulD
+;Solution_info = 2019-02-06 03:09:24, solution with cost = 98 found in 1.7s after examining 900 states.
+
+####  ####
+#  ####  #
+#  #  #  #
+#  #    $##
+#  . .#$  #
+#@ ## # $ #
+#   . #   #
+###########
+; 69
+;Solution = urrrurrrDrrddllUUrULLLulDrrrdrrdLdlUUruLLLdLLrrddllluUUdrrruulDrrruurDDDrdLdlUUruLLLdLLrruulDrdddllluluurDr\
+;Solution_info = 2019-02-06 03:10:11, solution with cost = 125 found in 47s after examining 5186 states.
+
+#####
+# @ ####
+#      #
+# $ $$ #
+##$##  #
+#   ####
+# ..  #
+##..  #
+ ###  #
+   ####
+; 70
+;Solution = drrrrddlUruLLLdRluullddRDDDuuuluurDDDDldRuuuurrdLulDDDrDulldRuuurrurrdLLLulDDD
+;Solution_info = 2019-02-06 03:10:43, solution with cost = 78 found in 31s after examining 4909 states.
+
+###########
+#     #   ###
+# $@$ # .  .#
+# ## ### ## #
+# #       # #
+# #   #   # #
+# ######### #
+#           #
+#############
+; 71
+;Solution = urDDululldRldddddrrrrrrrrrruuuuulllddllldlluRRRRdrUUdlllluuulldRurDDullldddddrrrrrrrrrruuuuullulldRRRllddll\
+;Solution_info = 2019-02-06 03:10:43, solution with cost = 120 found in 270ms after examining 194 states.
+
+  ####
+ ##  #####
+ #  $  @ #
+ #  $#   #
+#### #####
+#  #   #
+#    $ #
+# ..#  #
+#  .####
+#  ##
+####
+; 72
+;Solution = llLDlluRRdDDrrddlUruLdLLdlluurDldRurrUUUluurDRRdrruLLLLDDDrdLLDlluurDDurruuulluRurDDDDrdLLdllddrUluRluurD
+;Solution_info = 2019-02-06 03:10:51, solution with cost = 105 found in 7.5s after examining 2207 states.
+
+####
+#  #####
+# $$ $ #
+#      #
+## ## ##
+#...#@#
+# ### ##
+#      #
+#  #   #
+########
+; 73
+;Solution = uulllluurDDDurruLrdrruLLdrddddlllluuRuuluurDldRRRurDDDDuuulllddlddrrrdrruLLLLdlUUdrrrruuuuulLdlluurDDD
+;Solution_info = 2019-02-06 03:10:55, solution with cost = 102 found in 4.2s after examining 1590 states.
+
+ ####
+ #  #######
+ #$ @#   .#
+## #$$   .#
+#  $  ##..#
+#   # #####
+###   #
+  #####
+; 74
+;Solution = lulDDDRRlluurrDRRRurrddlUruLdllllullddrddrruUddlluuRuRRRRurDllllldlddrruUlllldRurruRRRluRRDllldddllUluRRldd\
+;Solution_info = 2019-02-06 03:12:42, solution with cost = 117 found in 110s after examining 7725 states.
+
+ #######
+## ....##
+#   ######
+#   $ $ @#
+###  $ $ #
+  ###    #
+    ######
+; 75
+;Solution = ddlluLuLLdRRdrrruulLLLdlUUluRRRlldddrrdrrUruLLLLdlUUluRRldddrrdrUruLLLdlUUluRldldRRdrruLdlUU
+;Solution_info = 2019-02-06 03:13:14, solution with cost = 92 found in 32s after examining 3771 states.
+
+ #####
+##   #
+#    #####
+#  #.#   #
+#@ #.# $ #
+#  #.#  ##
+#    #  #
+##  ##$$#
+ ##     #
+  #  ####
+  ####
+; 76
+;Solution = ddrdrdrrrrUUlDrdLLLdlUUluuuuurrddddLddrrruuuuurrdLulDDDDrdLLLdlUUlUUUUluRurrdddddLddrrruurUluurrdLulDDDDrdL\
+;Solution_info = 2019-02-06 03:13:58, solution with cost = 181 found in 44s after examining 4849 states.
+
+##########
+# @ .... #
+#   ####$##
+## #  $ $ #
+ # $      #
+ #   ######
+ #####
+; 77
+;Solution = ddddrrurrruLrdrruLdllllLdlUUUrurrrrrDDrdLLLuRldLLuRRllddlluuururrrrrdDrdLLLuRlllddlluuururrrrrdDuullllldllu\
+;Solution_info = 2019-02-06 03:18:17, solution with cost = 189 found in 260s after examining 11039 states.
+
+ #######
+##     ##
+#  $ $  #
+# $ $ $ #
+## ### ####
+ #@  .....#
+ ##     ###
+  #######
+; 78
+;Solution = uUrRuurrdDDuuullddRlllddrrrRRRlluUlluurrDDDullllddrrrRRluulluRurDDDullllddrrrdrruLLruuuullllDRRRurDDDulllul\
+;Solution_info = 2019-02-06 05:25:11, solution with cost = 135 found in 7.6ks after examining 44371 states.
+
+ #########
+ #    #  #
+## $#$#  #
+#  .$.@  #
+#  .#    #
+##########
+; 79
+;Solution = lLLdlluRRRRRlllluurrrDullDDrRdrrULLLrrrruulDrdLL
+;Solution_info = 2019-02-06 05:25:11, solution with cost = 48 found in 180ms after examining 233 states.
+
+####
+#  #######
+#  . ## .#
+# $#    .#
+## ## # .#
+ #    #  #
+ #### #  #
+  # @$ ###
+  # $$ #
+  #    #
+  ######
+; 80
+;Solution = lddrUdrruLUUUUdllluUluurDrrdRRRurDDlullddddddlluRdrUUUUUdllluUluurDrrdRRRdrUllldddddlluRdrUUUUdllluUluurDrr\
+;Solution_info = 2019-02-06 05:25:46, solution with cost = 131 found in 35s after examining 4287 states.
+
+ #####
+ #   #
+ # . #
+## * #
+#  *##
+#  @##
+## $ #
+ #   #
+ #####
+; 81
+;Solution = luuurrdLDldddrruLUUUruulldDrddlluRdrUdddlUUluR
+;Solution_info = 2019-02-06 05:25:47, solution with cost = 46 found in 330ms after examining 305 states.
+
+#####
+#   ###
+# .   ##
+##*#$  #
+# .# $ #
+# @## ##
+#     #
+#######
+; 82
+;Solution = drrruUlUdrruLuLLulldRDDlddrUdrrruuuulLulDrrrddlUruLL
+;Solution_info = 2019-02-06 05:25:47, solution with cost = 52 found in 48ms after examining 66 states.
+
+######
+#    ##
+# $ $ ##
+## $$  #
+ # #   #
+ # ## ##
+ #  . .#
+ # @. .#
+ #  ####
+ ####
+; 83
+;Solution = rruuuuuLullDDDDDrrruulUdrddllluuuRRlluurrDrDDDDldldlUUrrrrdLLullUUUrRurDDDDrdLuuuuululDulldRdRRurDDDuuululD\
+;Solution_info = 2019-02-06 05:55:23, solution with cost = 164 found in 1.8ks after examining 23821 states.
+
+########
+#  ... #
+#  ### ##
+#  # $  #
+## #@$  #
+ # # $  #
+ # ### #####
+ #         #
+ #   ###   #
+ ##### #####
+; 84
+;Solution = dRluuRDrDDuruuLuullllddddddrrrRRRdrruLLLLuuulluRdrdddLLLdlUUUUUluurrrrrdDDDDuuuuulllllddrddddrrrRRRdrruLLLL\
+;Solution_info = 2019-02-06 05:57:21, solution with cost = 201 found in 120s after examining 8524 states.
+
+       ####
+ #######  #
+ # $      #
+ #   $ $  #
+ # ########
+## # .  #
+#  # #  #
+#  @ . ##
+## # # #
+ #   . #
+ #######
+; 85
+;Solution = luuuurrurrdRullldlluRdrRurrdLLLLulDDDDldRRRlluuuurrrrrurrdLLLLLLulDDDDldRRlddrrrruuuulldDRlllddrrrruUUruLdd\
+;Solution_info = 2019-02-06 06:05:02, solution with cost = 155 found in 460s after examining 15053 states.
+
+    ####
+  ###  ##
+ ## $   #
+## $  # #
+# @#$$  #
+# ..  ###
+# ..###
+#####
+; 86
+;Solution = drrrUrruullDlDururrddlLdLLdlluurDldRuuuRRDrrruullDurrddlLdLLrruullldDuuruRdDrrruululDDurrddlLdLLrruulDrdL
+;Solution_info = 2019-02-06 06:05:26, solution with cost = 105 found in 24s after examining 3406 states.
+
+     ####
+######  #
+#       #
+#  ... .#
+##$######
+# $  #
+#   $###
+##  $  #
+ ## @  #
+  ######
+; 87
+;Solution = luRluurDllluRUUluRRRRdrruulDrdLLLullddddrruLdddrUdrruLLdlUluUUUluRRRRdrruulDrdLLullldddrrDLddrruLdlUlUUUUlu\
+;Solution_info = 2019-02-06 06:25:06, solution with cost = 149 found in 1.2ks after examining 22891 states.
+
+     ####
+ # ###  #
+ # #    #
+ # #  # #
+ # #$ #.#
+ # #  # # #
+ # #$ #.# #
+   #  # # #
+####$ #.# #
+# @     # #
+#   #  ## #
+########
+; 88
+;Solution = rrruulDrdLLdlluRRRuuruulDDDuuuruulDruurrdddddddldlULLdlluRRRRUUUUUlDDDDuuuuuurrrdddddddLdlULLdlluRRRRUUUluu\
+;Solution_info = 2019-02-06 06:27:59, solution with cost = 195 found in 170s after examining 8874 states.
+
+##########
+#   ##   #
+# $  $@# #
+#### # $ #
+   #.#  ##
+ # #.# $#
+ # #.   #
+ # #.   #
+   ######
+; 89
+;Solution = ddddrUluuuurrddLruulldDDDrdLdlluuuuuRldddddrruuuurruullDDDDuuulllulldRRRRldddddrrruulDLdlUUdrruuurruullDDDD\
+;Solution_info = 2019-02-06 06:39:45, solution with cost = 146 found in 710s after examining 16805 states.
+
+ ########
+ #  @   #
+ # $  $ #
+### ## ###
+#  $..$  #
+#   ..   #
+##########
+; 90
+;Solution = lldRdDrrdrruLLdlLuuuRurrDDuulldldddrrrruLdlllulldRRuuurRurDDDrdL
+;Solution_info = 2019-02-06 06:42:36, solution with cost = 64 found in 170s after examining 9237 states.
+
+###########
+#    .##  #
+# $$@..$$ #
+#   ##.   #
+###########
+; 91
+;Solution = rrdrrruulDLrrdLLuLLullllddrrURRlldlluRRRlluRR
+;Solution_info = 2019-02-06 06:42:37, solution with cost = 45 found in 910ms after examining 711 states.
+
+  ####
+  #  #    #####
+  #  #    #   #
+  #  ######.# #
+####  $    .  #
+#   $$# ###.# #
+#   #   # #   #
+######### #@ ##
+          #  #
+          ####
+; 92
+;Solution = uuullllLLrrddllULLdlluRRRUUluurDDDRRRRRRRddrruuLruulldDllllddllULLdlluRRRuRRRRRRRDDrruuLrddlluUddrddlUUrruu\
+;Solution_info = 2019-02-06 06:42:49, solution with cost = 126 found in 12s after examining 2773 states.
+
+ #########
+##   #   ##
+#    #    #
+#  $ # $  #
+#   *.*   #
+####.@.####
+#   *.*   #
+#  $ # $  #
+#    #    #
+##   #   ##
+ #########
+; 93
+
+#########
+# @ #   #
+# $ $   #
+##$### ##
+#  ...  #
+#   #   #
+######  #
+     ####
+; 94
+;Solution = rdRRurDlllulldRDuRRRurrdLDDllldlluRuurrRurrdLddrddlUruLuuLLLulldRRRRurDDDLrrddlUruL
+;Solution_info = 2019-02-06 18:42:52, solution with cost = 83 found in 1.4s after examining 811 states.
+
+########
+#@     #
+# .$$. #
+# $..$ #
+# $..$ #
+# .$$. #
+#      #
+########
+; 95
+;Solution = ddRDuuurrDLrrrddLUdddllUR
+;Solution_info = 2019-02-06 18:43:41, solution with cost = 25 found in 49s after examining 7248 states.
+
+  ######
+  #    #
+  #    #
+#####  #
+#   #.#####
+#   $@$   #
+#####.#   #
+   ## ## ##
+   #   $.#
+   #   ###
+   #####
+; 96
+;Solution = RRdrruLLLrrdddLLdlluRuuULLulldRRRRUUruLdddRRdrruLLLrdrddlLdlluRRRlluuUUUruulDDDDuuuulldRurDD
+;Solution_info = 2019-02-06 18:43:47, solution with cost = 92 found in 6.7s after examining 1994 states.
+
+   ####
+   #  ########
+#### $ $.....#
+#   $   ######
+#@### ###
+#  $  #
+# $ # #
+## #  #
+ #    #
+ ######
+; 97
+;Solution = drRlluurrRRddddldlluUluuurrruurDrRRRRRllllllldllldddrddrruruuuUluRRRRRRllllldlllldddrruRldlddrruruUUUluRRRR\
+;Solution_info = 2019-02-06 19:30:48, solution with cost = 164 found in 2.8ks after examining 31524 states.
+
+#####
+#   ## ####
+#  $ ### .#
+# $   $  .#
+## $#####.# ####
+# $  # # .###  #
+#    # # .#  @ #
+###  # #       #
+  #### ##     ##
+        #######
+; 98
+
+               #####
+               #   #
+#######  ####### # #
+#     #  #  #      #
+#  @  ####  #     ####
+#  #    ....## ####  #
+#    ##### ## $$ $ $ #
+######   #           #
+         #  ##########
+         ####
+; 99
+
+#######
+# @#  #
+#.$   #
+#. # $##
+#.$#   #
+#. # $ #
+#  #   #
+########
+; 100
+;Solution = lddrDuluurDrrrDldddrruuLrddlluUrrdLuuullllddrUdlddrUUluuRRRurDDDlUdrrddllUUrrdLuuuLLLulDDDrUluRRRurDDDlUruL\
+;Solution_info = 2019-02-07 22:55:31, solution with cost = 155 found in 44s after examining 5381 states.
+
+  #####
+  #   #
+  # # #######
+  #  *  #   #
+  ## ##   # #
+  #     #*  #
+### # # # ###
+#  *#$+   #
+# #   ## ##
+#   #  *  #
+####### # #
+      #   #
+      #####
+; 101
+;Solution = ruulllldDllddrrUrrUUdrruuuulLuullddRddRRlddrrrruUrruullDllDDullddddrRddrruuLuuL
+;Solution_info = 2019-02-07 22:56:23, solution with cost = 79 found in 52s after examining 4424 states.
+
+###########
+#....#    #
+#  #   $$ #
+#  @  ##  #
+#     ##$ #
+######  $ #
+     #    #
+     ######
+; 102
+
+  #####
+  # . ##
+### $  #
+# . $#@#
+# #$ . #
+#  $ ###
+## . #
+ #####
+; 103
+;Solution = ulLDlllddrRURuLdddrUluuruulDDDDrUUU
+;Solution_info = 2019-02-07 10:14:33, solution with cost = 35 found in 2.4s after examining 1342 states.
+
+    #####
+#####   #
+#    $  #
+#  $#$#@#
+### #   #
+  # ... #
+  ###  ##
+    #  #
+    ####
+; 104
+;Solution = ulLLLDlluRRRRDDDllUUddrrrddlUruuruuLulDlLdddrRlluulluRRRRDDrDLddrUluurruuLulDDD
+;Solution_info = 2019-02-07 10:14:36, solution with cost = 79 found in 2.8s after examining 1046 states.
+
+ #### ####
+##  ###  ##
+#   # #   #
+#  *. .*  #
+###$   $###
+ #   @   #
+###$   $###
+#  *. .*  #
+#   # #   #
+##  ###  ##
+ #### ####
+; 105
+
+ ########
+ #      #
+ #@   $ #
+## ###$ #
+# .....###
+# $ $ $  #
+###### # #
+     #   #
+     #####
+; 106
+
+########
+#      #
+# $*** #
+# *  * #
+# *  * #
+# ***. #
+#     @#
+########
+; 107
+;Solution = uuuLDrddllllluuRRRllluuurrDDRdLuuulldR
+;Solution_info = 2019-02-07 10:15:03, solution with cost = 38 found in 7.0s after examining 1720 states.
+
+####     #####
+#  ###   #   ##
+#    #   #$ $ #
+#..# ##### #  #
+#  @    # $ $ #
+#..#         ##
+##   #########
+ #####
+; 108
+
+  #######
+# #     #
+# # # # #
+  # @ $ #
+### ### #
+#   ### #
+# $  ##.#
+## $  #.#
+ ## $  .#
+# ## $#.#
+## ## #.#
+### #   #
+### #####
+; 109
+
+  ####
+  #  #
+  # $####
+###. .  #
+# $ # $ #
+#  . .###
+####$ #
+   # @#
+   ####
+; 110
+;Solution = lUruuurrdLullluurDldddlluRdrUURuulDrdRDrruLdlDLddrU
+;Solution_info = 2019-02-07 10:15:28, solution with cost = 51 found in 5.5s after examining 2169 states.
+
+######
+#    ####
+#    ...#
+#    ...#
+######  #
+  #  #  #
+  # $$ ##
+  # @$  #
+  # $$  #
+  ## $# #
+   #    #
+   ######
+; 111
+
+ #####
+##   ####
+#  $$$  #
+# #   $ #
+#   $## ##
+###  #.  #
+  #  #   #
+ ##### ###
+ #   # ##
+ # @....#
+ #      #
+ #   #  #
+ ########
+; 112
+
+   #####
+  ##   #
+###  # #
+#    . #
+#  ## #####
+#  . . #  ##
+#  # @ $   ###
+#####. #  $  #
+    ####  $  #
+       ## $ ##
+        #  ##
+        #  #
+        ####
+; 113
+
+######
+#    ###
+#  # $ #
+#  $ @ #
+## ## #####
+#  #......#
+# $ $ $ $ #
+##   ######
+ #####
+; 114
+
+    #####
+#####   ####
+#     #    #
+#  #.....  #
+##  ## # ###
+ #$$@$$$ #
+ #     ###
+ #######
+; 115
+
+     #####
+   ###   #
+####.....#
+# @$$$$$ #
+#     # ##
+#####   #
+    #####
+; 116
+;Solution = drrrdrruUruulldllDurrRdddlluUluRdRlddrruUlllLdlluRRdRUrrrddllUU
+;Solution_info = 2019-02-08 00:46:56, solution with cost = 63 found in 32s after examining 4725 states.
+
+ #### ####
+ #  ###  ##
+ #      @ #
+##..###   #
+#      #  #
+#...#$  # #
+# ## $$ $ #
+#  $    ###
+####  ###
+   ####
+; 117
+
+ #####
+##   ##
+#  $  ##
+# $ $  ##
+###$# . ##
+  # # .  #
+ ## ##.  #
+ # @  . ##
+ #   #  #
+ ########
+; 118
+
+  ######
+  #    ##
+ ## ##  #
+ # $$ # #
+ # @$ # #
+ #    # #
+#### #  #
+#  ... ##
+#     ##
+#######
+; 119
+;Solution = drddrruruuuulullldDlddrrruuLDDDulluRluRuurrrdrddddldlLLruuruuLrddlddrruruuuulullldDrDDDulluRuuurrrdrddddldl\
+;Solution_info = 2019-02-07 10:16:50, solution with cost = 131 found in 1.8s after examining 734 states.
+
+      ####
+#######  #
+# $      ##
+# $#####  #
+#  @#  #  #
+## ##..   #
+#  # ..####
+# $  ###
+# $###
+#  #
+####
+; 120
+;Solution = lluuRRRRRRurDDDuulllllllddrUdddldRlddrUUUUUluuRRRRRRurDDrddLLLdlldLrurruulDrrrruulDuulllllllddrUdddlddrUrru\
+;Solution_info = 2019-02-08 01:10:30, solution with cost = 183 found in 94s after examining 9040 states.
+
+ ######
+ # .  #
+##$.# #
+#  *  #
+# ..###
+##$ # #####
+## ## #   #
+#  #### # #
+#   @ $ $ #
+##  #     #
+ ##########
+; 121
+
+#####
+#   ###
+# #$  #
+# $   #
+# $ $ #
+# $#  #
+#  @###
+## ########
+#      ...#
+#         #
+########..#
+       ####
+; 122
+
+########
+#      #
+# $ $$ ########
+##### @##. .  #
+    #$  # .   #
+    #   #. . ##
+    #$# ## # #
+    #        #
+    #  ###  ##
+    #  # ####
+    ####
+; 123
+
+##############
+#      #     #
+# $@$$ # . ..#
+## ## ### ## #
+ # #       # #
+ # #   #   # #
+ # ######### #
+ #           #
+ #############
+; 124
+;Solution = urrDDuulldRlulldRdddddrrrrrrrrrruuuuulllddllldlluRRRRdrruLuurrrdddddlllllllllluuuuuurrdLrurrdLddrrRdrUUdlll\
+;Solution_info = 2019-02-08 01:44:00, solution with cost = 245 found in 30s after examining 4662 states.
+
+      #####
+      #   ##
+      # $  #
+######## #@##
+# .  # $ $  #
+#        $# #
+#...#####   #
+#####   #####
+; 125
+;Solution = ululDDDuurrddLrrddllULLLLLLdlUrrrrrrrdrruuluulldDuurrddLdLLLLLLdlluuRDrrrrrrruruulldDrdLLLLLLLulDrrrrruRdrr\
+;Solution_info = 2019-02-08 01:54:17, solution with cost = 125 found in 620s after examining 17603 states.
+
+ ###########
+##.......  #
+# $$$$$$$@ #
+#   # # # ##
+# # #     #
+#   #######
+#####
+; 126
+
+## ####
+####  ####
+ # $ $.  #
+## #  .$ #
+#   ##.###
+#  $  . #
+# @ #   #
+#  ######
+####
+; 127
+;Solution = uRRRdrruLuulluurDrdddLLLuluuRRdRluurDrDDuurrdLulllllddDrrrdrruLuUddLLLulldRRRRdrUlllllddrUluRRRRlluluurrdR
+;Solution_info = 2019-02-08 02:05:33, solution with cost = 106 found in 16s after examining 3505 states.
+
+  #########
+###   #   #
+# * $ . . #
+#   $ ## ##
+####*#   #
+ #  @  ###
+ #   ###
+ #####
+; 128
+;Solution = rrurruulllulldRRlldlluRRurrddLDuLulldRRuurrdLLrrRRurrdLddlldlLuUrurRllulldRRdldddlluRdrU
+;Solution_info = 2019-02-08 02:05:46, solution with cost = 88 found in 13s after examining 3067 states.
+
+  #########
+### @ #   #
+# * $ *.. #
+#   $ #   #
+####*#  ###
+ #     ##
+ #   ###
+ #####
+; 129
+;Solution = rdRRurDlllulldRRlldlluRRurrddLDuLulldRRuurrdLLrrRRddldlLuUrurrurrddLruulldllulldRRdldddlluRdrUrrurU
+;Solution_info = 2019-02-08 02:07:20, solution with cost = 99 found in 93s after examining 8662 states.
+
+#####  #####
+#   ####.. #
+# $$$      #
+#   $#  .. #
+### @#  ## #
+  #  ##    #
+  ##########
+; 130
+
+#####
+#   #
+# . #
+#.@.###
+##.#  #
+#  $  #
+# $   #
+##$$  #
+ #  ###
+ #  #
+ ####
+; 131
+;Solution = ddldRDRddlUUUUUUluRdddRDrruLLdlUUUluurrDLulDrddddddrUUrrdLLdlUUUUUdddrruLdlU
+;Solution_info = 2019-02-08 02:22:36, solution with cost = 76 found in 260s after examining 11387 states.
+
+####
+# @###
+#.*  #####
+#..#$$ $ #
+##       #
+ # # ##  #
+ #   #####
+ #####
+; 132
+;Solution = DrrDDllUdrruulLulDrrrddrruLrdrruLLdlllluurrDullddrRRRuLdlllddrrUdlluurRRllluurrDrdLLrddlluUUdrruulLddrrrurr\
+;Solution_info = 2019-02-08 02:23:10, solution with cost = 157 found in 33s after examining 4766 states.
+
+ #######
+ #  . .###
+ # . . . #
+### #### #
+#  @$  $ #
+#  $$  $ #
+####   ###
+   #####
+; 133
+
+        ####
+#########  #
+#   ## $   #
+#  $   ##  #
+### #. .# ##
+  # #. .#$##
+  # #   #  #
+  # @ $    #
+  #  #######
+  ####
+; 134
+
+#######
+#     #####
+# $$#@##..#
+# #       #
+#  $ # #  #
+#### $  ..#
+   ########
+; 135
+;Solution = dlddRRlluuruulllldddrRurrrddllUluRRuullDDuulldRlddrRurrRddllUdrruuRRurDDldLLuuluullDDRRRRlddrruUllllddRRRll\
+;Solution_info = 2019-02-08 02:47:09, solution with cost = 137 found in 120s after examining 8433 states.
+
+ #######
+ #     #
+## ###$##
+#.$   @ #
+# .. #$ #
+#.##  $ #
+#    ####
+######
+; 136
+;Solution = rddLLrruulllldlluRuurrrrDulllldddrruLdllddrrrUrrruuLuulllldDuurrrrddLLLdLrurrruulllldDlDRurrrrrddlUruLLLLLr\
+;Solution_info = 2019-02-08 02:48:21, solution with cost = 134 found in 71s after examining 6290 states.
+
+       ####
+      ##  ###
+####  #  $  #
+#  #### $ $ #
+#   ..# #$  #
+#  #   @  ###
+## #..# ###
+ # ## # #
+ #      #
+ ########
+; 137
+
+  ####
+###  #
+#    ###
+# # . .#
+# @ ...####
+# # # #   ##
+#   # $$   #
+#####  $ $ #
+    ##$ # ##
+     #    #
+     ######
+; 138
+
+ ####
+##  ####
+#   ...#
+#   ...#
+#   # ##
+#   #@ #### ####
+##### $   ###  #
+    #  ##$ $   #
+   ###     $$  #
+   # $  ##   ###
+   #    ######
+   ######
+; 139
+
+######## #####
+#  #   ###   #
+#      ## $  #
+#.# @ ## $  ##
+#.#   # $  ##
+#.#    $  ##
+#. ## #####
+##    #
+ ######
+; 140
+
+  ########
+  #  # . #
+  #   .*.#
+  #  # * #
+####$##.##
+#      $ #
+# $ ## $ #
+#   @#   #
+##########
+; 141
+
+  ####
+  #  #
+  #  ####
+###$.$  #
+#  .@.  #
+#  $.$###
+####  #
+   #  #
+   ####
+; 142
+;Solution = uulDrdrruLdlddrUluRlUluurDDrddlLUlldRRuUrrdLDlluRuruulDDrrddlUdrddlUruuurrdL
+;Solution_info = 2019-02-08 03:45:30, solution with cost = 76 found in 130s after examining 8237 states.
+
+####
+#  ####
+# $   #
+# .#  #
+# $# ##
+# .  #
+#### #
+   # #
+ ### ###
+ #  $  #
+## #$# ##
+# $ @ $ #
+# ..#.. #
+###   ###
+  #####
+; 143
+
+   ####
+ ###  #####
+ # $$ #   #
+ # $ . .$$##
+ # .. #. $ #
+### #** .  #
+#  . **# ###
+# $ .# .. #
+##$$.@. $ #
+ #   # $$ #
+ #####  ###
+     ####
+; 144
+
+   #####
+   # @ #
+  ##   ##
+###.$$$.###
+#  $...$  #
+#  $.#.$  #
+#  $...$  #
+###.$$$.###
+  ##   ##
+   #   #
+   #####
+; 145
+
+ #######
+##  .  ##
+# .$$$. #
+# $. .$ #
+#.$ @ $.#
+# $. .$ #
+# .$$$. #
+##  .  ##
+ #######
+; 146
+
+       #####
+########   #
+#.   .  @#.#
+#  ###     #
+## $  #    #
+ # $   #####
+ # $#  #
+ ## #  #
+  #   ##
+  #####
+; 147
+;Solution = lllllldddRRuLdlUUluRRRRRRdrrruullDllllllddrrrDrddlUruLLLrrdddlluUlUUUluRRRRRRlllllddrrdLdlUUUluRRRRRdrdrruL\
+;Solution_info = 2019-02-08 04:30:40, solution with cost = 146 found in 70s after examining 6693 states.
+
+###########
+#  .  #   #
+# #.  @   #
+#  #..# #######
+##  ## $$ $ $ #
+ ##           #
+  #############
+; 148
+;Solution = lllullddrdrdrrrrUUdldlllululuurrdrrrRurrdLLLLdlUrrrdddrruLdlUUdldlllululuurrdrrrRurrdLLLLuLLdRurDrrddrrdrru\
+;Solution_info = 2019-02-08 04:32:56, solution with cost = 197 found in 140s after examining 8372 states.
+
+ ####
+##  ###
+#@$   #
+### $ #
+ #  ######
+ #  $....#
+ #  # ####
+ ## # #
+ # $# #
+ #    #
+ #  ###
+ ####
+; 149
+;Solution = RurDDDlddrdDldRuuuluurDRRRRllllDDDlddrUUUUluRRRRlddddLruuuulldddlddrUUUUluRRRlluuurrdLulDDldRR
+;Solution_info = 2019-02-07 10:21:48, solution with cost = 94 found in 7.9s after examining 2146 states.
+
+     ####
+ #####  #
+ #     $#######
+## ## ..#  ...#
+# $ $$#$  @   #
+#        ###  #
+#######  # ####
+      ####
+; 150
+
+   ####
+   #  #
+ ###  #
+##  $ #
+#   # #
+# #$$ ######
+# #   #   .#
+#  $  @   .#
+###  ####..#
+  ####  ####
+; 151
+
+###### ####
+#     #    #
+#.##  #$##  #
+#   #     #  #
+#$  # ###  #  #
+# #      #  # #
+# # ####  # # #
+#. @    $ * . #
+###############
+; 152
+;Solution = lluuUrrdrrrrrdrdLLLLLLuurruurrrrdrdrddrruuululululllDurrrdrdrdrdddllLLululllllddrrrrRllllluuulldddRRuurruuu\
+;Solution_info = 2019-02-08 05:02:36, solution with cost = 233 found in 460s after examining 15907 states.
+
+#############
+#.# @#  #   #
+#.#$$   # $ #
+#.#  # $#   #
+#.# $#  # $##
+#.#  # $#  #
+#.# $#  # $#
+#..  # $   #
+#..  #  #  #
+############
+; 153
+
+ ############################
+ #                          #
+ # ######################## #
+ # #                      # #
+ # # #################### # #
+ # # #                  # # #
+ # # # ################ # # #
+ # # # #              # # # #
+ # # # # ############ # # # #
+ # # # # #            # # # #
+ # # # # # ############ # # #
+ # # # # #              # # #
+ # # # # ################ # #
+ # # # #                  # #
+##$# # #################### #
+#. @ #                      #
+#############################
+; 154
+;Solution = ruuuuuuuuuuuurrrrrrrrrrrrrrrrrrrrrddddddddddllllllllllllllllluuuuuurrrrrrrrrrrrrddlllllllllllddrrrrrrrrrrrr\
+;Solution_info = 2019-02-07 10:22:29, solution with cost = 429 found in 100ms after examining 27 states.
+
+    ######               ####
+#####*#  #################  ##
+#   ###                      #
+#        ########  ####  ##  #
+### ####     #  ####  ####  ##
+#*# # .# # # #     #     #   #
+#*# #  #     # ##  # ##  ##  #
+###    ### ###  # ##  # ##  ##
+ #   # #*#      #     # #    #
+ #   # ###  #####  #### #    #
+ #####   #####  ####### ######
+ #   # # #**#               #
+## # #   #**#  #######  ##  #
+#    #########  #    ##### ###
+# #             # $        #*#
+#   #########  ### @#####  #*#
+#####       #### ####   ######
+; 155
+;Solution = uulldRRRRRRRRdrUUUruLLLLLLLLLLLLulDDDrdLLLLLLLLLLLulllddrrUdlluurRluurrdDldRRRRRRRRRRdrUUUluRRRRRRRRRdrUUUU\
+;Solution_info = 2019-02-07 10:22:29, solution with cost = 282 found in 420ms after examining 211 states.
+
