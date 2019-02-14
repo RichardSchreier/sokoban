@@ -19,3 +19,6 @@ Debug
 ^h      print heuristic
 ^n      print neighbors
 ^s      print solution string
+
+To install pygame, use pip:
+pip install pygame
