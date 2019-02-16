@@ -13,12 +13,12 @@ def find_path(a, b, is_open):
         return []
     if not is_open(b):
         return None
-    moves = direct_path(a, b, is_open) or rectilinear_path(a, b, is_open) or find_path_using_a_star(a, b, is_open)
+    moves = rectilinear_path(a, b, is_open) or direct_path(a, b, is_open) or find_path_using_a_star(a, b, is_open)
     return moves
 
 
 def sgn(x):
-    if x > + 0:
+    if x >= 0:
         return 1
     else:
         return -1
@@ -29,6 +29,25 @@ def sign_and_magnitude(x):
         return 1, x
     else:
         return -1, -x
+
+
+def rectilinear_path(a, b, is_open):
+    def check_moves(moves):
+        p = a
+        for move in moves:
+            p += move
+            if not is_open(p):
+                return None
+        return moves
+
+    horizontal_moves = [Point(sgn(b.x - a.x), 0)] * abs(b.x - a.x)
+    vertical_moves = [Point(0, sgn(b.y - a.y))] * abs(b.y - a.y)
+    if abs(a.x - b.x) > abs(a.y - b.y):
+        return check_moves(horizontal_moves + vertical_moves) or \
+               (vertical_moves and check_moves(vertical_moves + horizontal_moves))
+    else:
+        return check_moves(vertical_moves + horizontal_moves) or \
+               (horizontal_moves and check_moves(horizontal_moves + vertical_moves))
 
 
 def hv45_path(a, b, is_open):
@@ -70,30 +89,13 @@ def direct_path(a, b, is_open):
     return moves
 
 
-def rectilinear_path(a, b, is_open):
-    def check_moves(moves):
-        p = a
-        for move in moves:
-            p += move
-            if not is_open(p):
-                return None
-        return moves
-
-    horizontal_moves = [Point(sgn(b.x - a.x), 0)] * abs(b.x - a.x)
-    vertical_moves = [Point(0, sgn(b.y - a.y))] * abs(b.y - a.y)
-    if abs(a.x - b.x) > abs(a.y - b.y):
-        return check_moves(horizontal_moves + vertical_moves) or \
-               (vertical_moves and check_moves(vertical_moves + horizontal_moves))
-    else:
-        return check_moves(vertical_moves + horizontal_moves) or \
-               (horizontal_moves and check_moves(horizontal_moves + vertical_moves))
+UNIT_MOVES = [Point(1, 0), Point(-1, 0), Point(0, 1), Point(0, -1)]
 
 
 def find_path_using_a_star(a, b, is_open):
     """Find a path from a to b using a uniform-step-cost version of the A* algorithm"""
     def successor(p_):
-        moves = [Point(1, 0), Point(-1, 0), Point(0, 1), Point(0, -1)]
-        for move in moves:
+        for move in UNIT_MOVES:
             pp = p_ + move
             if is_open(pp):
                 yield pp
@@ -109,7 +111,6 @@ def find_path_using_a_star(a, b, is_open):
         moves.reverse()
         return moves
 
-    # I am not comfortable using a dict to hold values that I would normally stuff into an array
     def predecessor(p_):
         return node_dict[p_][0]
 

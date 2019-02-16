@@ -37,11 +37,12 @@ class PriorityQueue:
         self.queue.insert(n, (priority, item))
 
     def pop(self):
-        if not self.queue:
+        try:
+            priority, item = self.queue[0]
+            del self.queue[0]
+            return item
+        except IndexError:
             return None
-        priority, item = self.queue[0]
-        del self.queue[0]
-        return item
 
     def check(self):
         """Verify priorities are non-decreasing"""
@@ -50,6 +51,7 @@ class PriorityQueue:
             if p0 is not None:
                 assert priority >= p0
             p0 = priority
+        self.print()
 
     def print(self):
         for priority, item in self.queue:
@@ -64,12 +66,12 @@ def __test__():
     pq.check()
     pq.insert("c", 3)
     pq.check()
-    pq.insert("d", 7)
+    pq.insert("d", 3)
     pq.check()
     pq.insert("e", 4)
     pq.check()
-    priority, item = pq.pop()
-    assert priority is 3 and item is "c"
+    item = pq.pop()
+    assert item is "d"
 
 
 if __name__ == '__main__':

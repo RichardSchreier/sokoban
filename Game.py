@@ -10,6 +10,7 @@ from copy import deepcopy
 from find_path import find_path
 from Point import Point
 from a_star import a_star
+from engineering_notation import eng
 
 WALL = '#'
 SPACE = ' '
@@ -20,13 +21,12 @@ BOX = '$'
 BOX_ON_GOAL = '*'
 NO_BOX = 'X'  # Only used in annotated_map
 CAUTION_BOX = 'x'
-# TODO: Switch from list to string
-WORKER_CHARS = [WORKER, WORKER_ON_GOAL]
-BOX_CHARS = [BOX, BOX_ON_GOAL]
-OPEN_FOR_BOX = [SPACE, GOAL]
-OPEN_FOR_WORKER = OPEN_FOR_BOX + [NO_BOX]
-GOAL_CHARS = [GOAL, BOX_ON_GOAL, WORKER_ON_GOAL]
-VALID_CHARS = frozenset([WALL] + OPEN_FOR_BOX + WORKER_CHARS + BOX_CHARS)
+WORKER_CHARS = WORKER + WORKER_ON_GOAL
+BOX_CHARS = BOX + BOX_ON_GOAL
+OPEN_FOR_BOX = SPACE + GOAL
+OPEN_FOR_WORKER = OPEN_FOR_BOX + NO_BOX
+GOAL_CHARS = GOAL + BOX_ON_GOAL + WORKER_ON_GOAL
+VALID_CHARS = frozenset(WALL + OPEN_FOR_BOX + WORKER_CHARS + BOX_CHARS)
 file_dict = {WALL: 'wall', SPACE: 'floor', BOX: 'box', BOX_ON_GOAL: 'box_docked', WORKER: 'worker',
              WORKER_ON_GOAL: 'worker_dock', GOAL: 'dock', NO_BOX: 'no_box', CAUTION_BOX: 'caution_box'}
 blit_dict = {key: pygame.image.load(f'Images/{file}.png') for (key, file) in file_dict.items()}
@@ -126,7 +126,7 @@ class GameWorld:
                     assert level_id
                 else:
                     print(f"Problem in line {actual_line_number} of {self.full_filename}.")
-                    sys.exit(1)  # ToDo: Throw an error instead?
+                    sys.exit(1)
                 self.contents.append(line)
                 logical_line_number += 1
                 actual_line_number += 1
@@ -145,19 +145,46 @@ class GameWorld:
                 file.write(line + '\n')
 
     def check_and_update_solution(self, level_i, solution):
-        if not self.solutions[level_i]:
+        """Update the solution if it is new or shorter than the existing solution.
+        Return a string summarizing the difference between the new and the existing solution"""
+        def parse_solution_info(info_str):
+            def parse_value(search_str1, search_str2=" "):
+                try:
+                    i = info_str.index(search_str1) + len(search_str1)
+                    j = info_str.find(search_str2, i)
+                    return eng(info_str[i:j])
+                except (ValueError, IndexError):
+                    return None
+
+            solution_time = parse_value('found in ', 's')
+            states_searched = parse_value('after examining ', 'states')
+            return solution_time, states_searched
+
+        if solution[0]:
+            l1 = len(solution[0])
+            solution_time1, states_searched1 = parse_solution_info(solution[1])
+            if not self.solutions[level_i]:
+                summary_str = f"New solution of length {l1} found in {solution_time1}s"
+            else:   # Compare against existing solution
+                old_solution = self.solutions[level_i]
+                l0 = len(old_solution[0])
+                solution_time0, states_searched0 = parse_solution_info(old_solution[1])
+                if l1 < l0:
+                    summary_str = f'New solution is shorter ({l1} vs. {l0}).'
+                elif l1 > l0:
+                    summary_str = f'New solution is longer ({l1} vs. {l0}).'
+                else:
+                    summary_str = f'Same solution length ({l1}).'
+                solution_time_diff = (solution_time1 - solution_time0) / solution_time0
+                summary_str += f' Solution time ({eng(solution_time1)}s) is '
+                if solution_time_diff < -0.1:
+                    summary_str += f'{-solution_time_diff * 100:.0f}% faster.'
+                elif solution_time_diff > 0.1:
+                    summary_str += f'{solution_time_diff * 100:.0f}% slower.'
+                else:
+                    summary_str += f'is essentially the same.'
             self.update_solution(level_i, solution)
-        else:
-            # Compare existing solution against new one
-            old_solution = self.solutions[level_i]
-            level_id = self.level_ids[level_i]
-            l1 = len(old_solution[0])
-            l2 = len(solution[0])
-            if l1 > l2:
-                print(f':Old solution for level {level_id} is longer than new solution ({l1} vs. {l2}). Updating.')
-                self.update_solution(level_id, solution)
-            elif l1 < l2:
-                print(f':Old solution for level {level_id} is shorter than new solution ({l1} vs. {l2}). Not updating.')
+            return summary_str
 
     def update_solution(self, level_i, solution):
         self.solutions[level_i] = solution
@@ -293,7 +320,6 @@ class Game:
         self.current_state = self.solution_state
 
     def solve(self):
-        # Todo: animate the solution process; respond to keyboard
         solution, solution_info = self.current_state.solve()
         self.solution_state = solution
         date_str = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
@@ -597,16 +623,16 @@ class GameMap:
 
         def check_direction():
             map_modified = False
-            pp = p + d
-            dp = Point(d.y, -d.x)
-            while self[pp] in SPACE and constrained_path(self[pp + dp], self[pp - dp]):
-                pp += d
-            if self[pp] in WALL + NO_BOX and pp - d != p:
-                pp -= d
+            pp_ = p + d
+            dp_ = Point(d.y, -d.x)
+            while self[pp_] in SPACE and constrained_path(self[pp_ + dp_], self[pp_ - dp_]):
+                pp_ += d
+            if self[pp_] in WALL + NO_BOX and pp_ - d != p:
+                pp_ -= d
                 map_modified = True
-                while pp != p:
-                    self[pp] = NO_BOX
-                    pp -= d
+                while pp_ != p:
+                    self[pp_] = NO_BOX
+                    pp_ -= d
             return map_modified
 
         def fill_inaccessible_with_wall():

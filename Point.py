@@ -1,3 +1,6 @@
+from math import sqrt
+
+
 class Point:
     """A 2D point class."""
     __slots__ = ['x', 'y']  # Prevents the creation of an instance dictionary
@@ -9,7 +12,7 @@ class Point:
     def __eq__(self, d):  # to make == work
         return self.x == d.x and self.y == d.y
 
-    def __hash__(self):  # to support dictionary indexing
+    def __hash__(self):  # to support dictionary indexing based on the point aot the Point object
         return hash((self.x, self.y))
 
     def __bool__(self):  # to support conditionals
@@ -28,7 +31,10 @@ class Point:
     def __neg__(self):   # unary minus
         return Point(-self.x, -self.y)
 
-    def __mul__(self, k):   # to support point * k; also supports k * point
+    def __mul__(self, k):   # to support point * k
+        return Point(self.x * k, self.y * k)
+
+    def __rmul__(self, k):   # to support k * point
         return Point(self.x * k, self.y * k)
 
     def __str__(self):
@@ -43,3 +49,7 @@ class Point:
     @property
     def l1_norm(self):
         return abs(self.x) + abs(self.y)
+
+    @property
+    def l2_norm(self):
+        return sqrt(self.x ** 2 + self.y ** 2)

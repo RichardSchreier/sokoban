@@ -1,7 +1,7 @@
 Sokoban game in python with simple solver built on David Moreno's sokoban code.
 
 Key         Action
-←↑↓→    Move left, up, down, right
+←↑↓→    Move worker left, up, down, right
 n/p     Next/previous level
 N/P     Next/previous unsolved level
 >/<     Next/previous world
@@ -13,6 +13,7 @@ s       If no solution, solve from the current state;
 S       Solve from the initial state, even if a solution exists
 R       Replay solution
 u/U     Undo/Re-do
+mouse   Move worker to specified square; can push box adjacent to worker
 
 Debug
 ^a      show NO_BOX squares
