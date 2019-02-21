@@ -1,5 +1,4 @@
 """Sokoban game class"""
-import math
 import pygame
 import os
 import sys
@@ -7,6 +6,7 @@ import datetime
 import time
 from itertools import permutations
 from copy import deepcopy
+from getpass import getuser
 from find_path import find_path
 from Point import Point
 from a_star import a_star
@@ -37,6 +37,7 @@ LEFT = Point(-1, 0)
 RIGHT = Point(1, 0)
 MOVE_DIRECTIONS = [UP, DOWN, LEFT, RIGHT]
 MAX_LINE_LENGTH = 120
+INFINITY = sys.maxsize // 2
 
 
 class GameWorld:
@@ -175,14 +176,15 @@ class GameWorld:
                     summary_str = f'New solution is longer ({l1} vs. {l0}).'
                 else:
                     summary_str = f'Same solution length ({l1}).'
-                solution_time_diff = (solution_time1 - solution_time0) / solution_time0
-                summary_str += f' Solution time ({eng(solution_time1)}s) is '
-                if solution_time_diff < -0.1:
-                    summary_str += f'{-solution_time_diff * 100:.0f}% faster.'
-                elif solution_time_diff > 0.1:
-                    summary_str += f'{solution_time_diff * 100:.0f}% slower.'
-                else:
-                    summary_str += f'is essentially the same.'
+                if solution_time0:
+                    solution_time_diff = (solution_time1 - solution_time0) / solution_time0
+                    summary_str += f' Solution time ({eng(solution_time1)}s) is '
+                    if solution_time_diff < -0.1:
+                        summary_str += f'{-solution_time_diff * 100:.0f}% faster.'
+                    elif solution_time_diff > 0.1:
+                        summary_str += f'{solution_time_diff * 100:.0f}% slower.'
+                    else:
+                        summary_str += f'essentially the same.'
             self.update_solution(level_i, solution)
             return summary_str
 
@@ -216,12 +218,15 @@ class GameWorld:
 
 
 class Game:
+    debug = False
+    
     def __init__(self, full_map, level_id, initialize_screen=True, solution=(None, None)):
         self.raw_map = GameMap(full_map)
         worker, boxes, goals = self.raw_map.make_raw()
         self.annotated_map = deepcopy(self.raw_map)
         self.annotated_map.annotate(worker)
         self.show_annotated_map = False
+        self.show_raw_map = False
         self.initial_state = GameState(worker, boxes, self)
         self.current_state = self.initial_state
         self.goals = goals
@@ -231,6 +236,8 @@ class Game:
             self.solution_state = self.verify_solution(solution[0])
             if self.solution_state:
                 self.solution_info = solution[1]
+            else:
+                print(f"Saved solution for {self.level_id} didn't work!")
         else:
             self.solution_state = None
             self.solution_info = ""
@@ -238,6 +245,38 @@ class Game:
             self.screen = pygame.display.set_mode(self.size)  # Generates KEYUP events for all active keys, incl. SHIFT!
         else:
             self.screen = None
+        self._move_count_maps = None
+        self._min_move_count_map = None
+
+    @property
+    def move_count_maps(self):
+        """Move counts needed to push a box to each goal. Uses lazy initialization"""
+        if getattr(self, '_move_count_maps', None) is None:
+            self._move_count_maps = []
+            for goal in self.goals:
+                self._move_count_maps.append(MoveCountMap(self.raw_map, goal))
+        return self._move_count_maps
+
+    @property
+    def min_move_count_map(self):
+        if getattr(self, '_min_move_count_map', None) is None:
+            if len(self.goals) == 1:
+                self._min_move_count_map = self.move_count_maps[0]
+            else:
+                self._min_move_count_map = deepcopy(self.move_count_maps[0])
+                for next_map in self.move_count_maps[1:]:
+                    for y in range(len(next_map.matrix)):
+                        for x in range(len(next_map.matrix[y])):
+                            p = Point(x, y)
+                            if next_map[p] < self.min_move_count_map[p]:
+                                self.min_move_count_map[p] = next_map[p]
+        return self._min_move_count_map
+
+    def print_move_count_maps(self):
+        for g_i, g in enumerate(self.goals):
+            print(self.move_count_maps[g_i])
+        print("Minima of above maps:")
+        print(self.min_move_count_map)
 
     @property
     def size(self):
@@ -247,10 +286,20 @@ class Game:
     @staticmethod
     def grid_point(screen_pos):
         return Point(screen_pos[0] // CELL_SIZE, screen_pos[1] // CELL_SIZE)
+    
+    @classmethod
+    def toggle_debug(cls):
+        cls.debug = not cls.debug
+        if cls.debug:
+            print("Debug is on")
+        else:
+            print("Debug is off")
 
     def display(self):
         if self.show_annotated_map:
             self.display_annotated_map()
+        elif self.show_raw_map:
+            self.display_raw_map()
         else:
             self.display_full_map()
 
@@ -265,6 +314,10 @@ class Game:
     def display_annotated_map(self):
         self.annotated_map.display(self.screen)
         pygame.display.set_caption("Annotated Map")
+
+    def display_raw_map(self):
+        self.raw_map.display(self.screen)
+        pygame.display.set_caption("Raw Map")
 
     def solved(self):
         return self.current_state.solved()
@@ -320,13 +373,18 @@ class Game:
         self.current_state = self.solution_state
 
     def solve(self):
+        move_count0 = self.current_state.move_count
         solution, solution_info = self.current_state.solve()
         self.solution_state = solution
-        date_str = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        self.solution_info = f"{date_str}, {solution_info}"
         if solution is not None:
             self.current_state = solution
-            if self.screen:
+            date_str = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+            if move_count0 is not 0:
+                self.solution_info = f"{date_str}, solution with cost = {solution.move_count} " \
+                 + f"found after {move_count0} manual moves by {getuser()}"
+            else:
+                self.solution_info = f"{date_str}, {solution_info}"
+            if self.debug and self.screen:
                 print(solution_info, self.solution_string())
 
     def solution_string(self):
@@ -359,8 +417,6 @@ class Game:
             current_state = current_state.move(d)
         if current_state.solved():
             return current_state
-        else:
-            print(f"Saved solution for {self.level_id} didn't work!")
 
 
 class GameState:
@@ -384,7 +440,7 @@ class GameState:
         self._full_map = None
 
     @property
-    def full_map(self):  # full_map uses lazy initialization; ToDo: Try using a try statement
+    def full_map(self):  # use lazy initialization;
         if getattr(self, '_full_map', None) is None:
             self._full_map = self.game.raw_map.fill(self.worker, self.boxes)
         return self._full_map
@@ -420,7 +476,7 @@ class GameState:
 
     def check_2x2(self, b, dd):
         """Check the 2x2 square with one corner at b and the opposite corner ad b + dd.
-        The box is deadlocked if the square contains only walls or boxes, and at least one box is not on a goal."""
+        Deadlock has occurred if the square contains only walls or boxes, and at least one box is not on a goal."""
         walls = 0
         c = self.full_map[b]
         if c in SPACE + WORKER:     # The box will be pushed to b
@@ -476,8 +532,8 @@ class GameState:
                 return True
         return False
 
-    def number_of_boxes_along_path(self, p, pp):
-        """Count the number of boxes on the path joining p to pp"""
+    def number_of_boxes_along_line(self, p, pp):
+        """Count the number of boxes on the line joining p to pp"""
         n = 0
         if p.x == pp.x:
             for b in self.boxes:
@@ -499,65 +555,85 @@ class GameState:
                     moves = find_path(self.worker, new_worker, self.full_map.open_for_worker)
                     if moves is not None:
                         moves.append(d)
-                        new_state = self.move_box(b, d, moves)  # todo: check if new_state is new?
+                        new_state = self.move_box(b, d, moves)
                         if not self.predecessor or new_state != self.predecessor:
                             yield new_state
 
-    def is_goal(self):  # TODO: see if I can pass this as an argument. Use getattr(object, name[, default])
+    def is_goal(self):
         return self.solved()
 
-    def cost(self):  # TODO: see if I can pass this as an argument. Use getattr(object, name[, default])
+    def cost(self):
         return self.move_count
 
     # heuristic() underestimates the number of moves needed to reach a solution; used by a_star().
     def heuristic(self):
+        """For each pairing of boxes with goals, sum the move counts found in game.move_count_maps."""
+        if self.solved():
+            return 0
+        n = len(self.boxes)
+        if n > 6:    # Too many permutations
+            return self.heuristic1()
+        min_move_count = INFINITY
+        for p in permutations(range(n)):
+            move_count = sum([self.game.move_count_maps[j][self.boxes[i]] for i, j in enumerate(p)])
+            min_move_count = min(min_move_count, move_count)
+        return min_move_count
+
+    def heuristic_using_search(self):   # only faster than the above brute-force method for n>=8
+        """Find the minimum move count sum over all box-goal pairings. (Uses search aot examining all permutations.)"""
+        def search_pairings(box_i, goal_indices, current_move_count=0):
+            """Recursive search equivalent to looking at all permutations."""
+            nonlocal min_move_count
+            box = self.boxes[box_i]
+            if box_i == len(goal_indices) - 1:  # last pairing
+                move_count = current_move_count + move_count_maps[goal_indices[-1]][box]
+                min_move_count = min(min_move_count, move_count)
+                return
+            # Stop recursion if underestimate exceeds the current min_move_count
+            underestimate = current_move_count
+            for b in self.boxes[box_i:]:
+                underestimate += min([move_count_maps[i][b] for i in goal_indices[box_i:]])
+            if underestimate >= min_move_count:
+                return
+            unallocated_indices = sorted(goal_indices[box_i:], key=lambda i: move_count_maps[i][box])
+            for i, j in enumerate(unallocated_indices):
+                rearranged_goal_indices = goal_indices[0:box_i] + \
+                                          [unallocated_indices[i]] + unallocated_indices[:i] + unallocated_indices[i+1:]
+                new_base_move_count = current_move_count + move_count_maps[j][box]
+                search_pairings(box_i + 1, rearranged_goal_indices, new_base_move_count)
+                if underestimate >= min_move_count:
+                    return
+
+        if self.solved():
+            return 0
+        n = len(self.boxes)
+        if n > 6:   # Too many permutations
+            return self.heuristic1()
+        move_count_maps = self.game.move_count_maps
+        min_move_count = INFINITY
+        search_pairings(0, list(range(n)))
+        return min_move_count
+
+    def heuristic1(self):
+        """Sum the minimum move counts found in game.min_move_count_map."""
+        if self.solved():
+            return 0
+        move_sum = 0
+        for b in self.boxes:
+            move_sum += self.game.min_move_count_map[b]
+        return move_sum
+
+    def heuristic0(self):
         """Sum the distances from each box to the nearest goal."""
         if self.solved():
             return 0
         move_sum = 0
         for b in self.boxes:
-            min_move_count = math.inf
+            min_move_count = INFINITY
             for g in self.game.goals:
                 min_move_count = min(min_move_count, (b - g).l1_norm)
             move_sum += min_move_count
         return move_sum
-
-    def heuristic1(self):
-        """Sum the distances from each box to the nearest goal."""
-        if self.solved():
-            return 0
-        move_sum = 0
-        for b in self.boxes:
-            min_move_count = math.inf
-            for g in self.game.goals:
-                min_move_count = min(min_move_count, len(find_path(b, g, self.game.raw_map.open_for_worker)))
-            move_sum += min_move_count
-        return move_sum
-
-    def heuristic0(self):
-        """For each pairing of boxes with goals, count the number of moves to the box and then to the associated goal.
-        Return the lowest move count. THIS HEEURISTIC IS NOT NECESSARILY AN UNDERESTIMATE"""
-        if self.solved():
-            return 0
-        min_move_count = math.inf
-        for p in permutations(range(len(self.boxes))):
-            move_count = 0
-            worker = self.worker
-            for i, goal_i in enumerate(p):
-                b = self.boxes[i]
-                g = self.game.goals[goal_i]
-                try:
-                    move_count += len(find_path(worker, b, self.game.raw_map.open_for_worker))
-                    move_count += len(find_path(b, g, self.game.annotated_map.open_for_worker))
-                except TypeError:
-                    move_count = math.inf
-                    break
-                if move_count >= min_move_count:
-                    break
-                worker = g
-            if move_count < min_move_count:
-                min_move_count = move_count
-        return min_move_count
 
     def solve(self):
         """Use the A-star algorithm to search for a solution"""
@@ -567,7 +643,8 @@ class GameState:
                 s = f"{len(states_seen)} states, "
                 q = f"{len(pq)} queued, "
                 m = f"{state.move_count + state.heuristic()} moves"
-                print(t + s + q + m)
+                if self.game.debug:
+                    print(t + s + q + m)
                 state.full_map.display(self.game.screen)
                 pygame.display.set_caption(t + m)
                 pygame.display.flip()
@@ -578,14 +655,14 @@ class GameState:
                     first_pass = False
                     for event in pygame.event.get():
                         if event.type == pygame.QUIT:
-                            return False    # Todo: Should exit
+                            sys.exit()
                         elif event.type == pygame.KEYDOWN:
                             if event.key in (pygame.K_q, pygame.K_ESCAPE):
                                 return False
                             elif event.unicode == ' ':
                                 pause = not pause
 
-        return a_star(self, 1000, 60 * 60, 200000, (progress_fn, 0.5))
+        return a_star(self, max_cost=1000, max_time=10 * 3600, max_states=200000, progress_report=(progress_fn, 0.5))
 
 
 class GameMap:
@@ -635,23 +712,7 @@ class GameMap:
                     pp_ -= d
             return map_modified
 
-        def fill_inaccessible_with_wall():
-            accessible_map = deepcopy(self)
-            frontier = [worker]
-            while frontier:
-                p = frontier.pop()
-                accessible_map[p] = WORKER
-                for d in MOVE_DIRECTIONS:
-                    pp = p + d
-                    if accessible_map[pp] in SPACE + GOAL:
-                        frontier.append(pp)
-            for y, row in enumerate(self.matrix):
-                for x, c in enumerate(row):
-                    p = Point(x, y)
-                    if self[p] is SPACE and accessible_map[p] is not WORKER:
-                        self[p] = WALL
-
-        fill_inaccessible_with_wall()
+        self.fill_inaccessible_with_wall(worker)
         # mark inside corners with NO_BOX or CAUTION_BOX
         marker_dict = {SPACE: NO_BOX, GOAL: CAUTION_BOX}
         corners = []
@@ -688,8 +749,23 @@ class GameMap:
                         self[pp] = CAUTION_BOX
                         pp -= d
 
+    def fill_inaccessible_with_wall(self, worker):
+        accessible_map = deepcopy(self)
+        frontier = [worker]
+        while frontier:
+            p = frontier.pop()
+            accessible_map[p] = WORKER
+            for d in MOVE_DIRECTIONS:
+                pp = p + d
+                if accessible_map[pp] in SPACE + GOAL:
+                    frontier.append(pp)
+        for y, row in enumerate(self.matrix):
+            for x, c in enumerate(row):
+                p = Point(x, y)
+                if self[p] is SPACE and accessible_map[p] is not WORKER:
+                    self[p] = WALL
+
     def fill(self, worker, boxes):
-        # ToDo: only copy rows that are changed
         full_map = deepcopy(self)
         full_map.add_worker(worker)
         for b in boxes:
@@ -754,12 +830,79 @@ class GameMap:
                 x = len(row)
         return x, y
 
-    def print(self):
+    def __str__(self):
+        string = ""
         for row in self.matrix:
-            print(str.join("", row))
+            string += str.join("", row) + '\n'
+        return string
 
     def open_for_worker(self, p):
         return self[p] in OPEN_FOR_WORKER
 
     def open_for_box(self, p):
         return self[p] in OPEN_FOR_BOX
+
+
+class MoveCountMap:
+    """Tabulates the minimum number of moves to push a box to a particular goal"""
+
+    def __init__(self, raw_map, goal):
+        def worker_moves():
+            saved_map_state = raw_map[box]
+            raw_map[box] = BOX
+            moves = find_path(new_worker, worker, raw_map.open_for_worker)
+            raw_map[box] = saved_map_state
+            if moves:
+                return len(moves)
+            else:
+                return INFINITY
+
+        self.matrix = []
+        for row in raw_map.matrix:
+            self.matrix.append([INFINITY] * len(row))
+
+        frontier = []
+        move_counts = {}
+        self[goal] = 0
+        box = goal
+        for d in MOVE_DIRECTIONS:
+            worker = box + d
+            if raw_map.open_for_worker(worker):
+                frontier.append((box, worker, 0))
+                move_counts[(box, worker)] = 0
+
+        while frontier:
+            box, worker, move_count = frontier.pop()
+            for d in MOVE_DIRECTIONS:
+                new_box = box + d
+                new_worker = new_box + d
+                if raw_map.open_for_box(new_box) and raw_map.open_for_worker(new_worker):
+                    new_move_count = move_count + worker_moves()
+                    new_state = new_box, new_worker
+                    if new_state not in move_counts or new_move_count < move_counts[new_state]:
+                        move_counts[new_state] = new_move_count
+                        frontier.append((new_box, new_worker, new_move_count))
+                        if new_move_count < self[new_box]:
+                            self[new_box] = new_move_count
+
+    def __str__(self):
+        string = ""
+        for row in self.matrix:
+            for c in row:
+                if c == INFINITY:
+                    string += " *  "
+                else:
+                    string += f"{c:3} "
+            string += '\n'
+        return string
+
+    # query/set map contents using self[point]
+    def __getitem__(self, point):
+        if point.x < 0 or point.y < 0:
+            raise IndexError
+        return self.matrix[point.y][point.x]
+
+    def __setitem__(self, point, content):
+        if point.x < 0 or point.y < 0:
+            raise IndexError
+        self.matrix[point.y][point.x] = content

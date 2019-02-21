@@ -8,25 +8,30 @@ N/P     Next/previous unsolved level
 >/<     Next/previous level file
 q       Quit
 r       Re-start
-s       If no solution, solve from the current state;
-        space   pause solve
-        esc     exit solve
-S       Solve from the initial state, even if a solution exists
+s       If no solution, solve from the current state.
+S       Solve from the initial state, even if a solution has been found. While the solver is running:
+            space   pause solve
+            esc     exit solve
 R       Replay solution
 u/U     Undo/Re-do
 mouse   Move worker to specified square, can push box adjacent to worker
 
 Debug
-^a      show NO_BOX squares
+^a      display annotated_map
+^d      toggle DEBUG flag; DEBUG==True prints debug messages during solve()
 ^h      print heuristic
+^m      print move_count_maps
 ^n      print neighbors
 ^s      print solution string
 """
 import sys
 import os
+import time
+from datetime import datetime
+from getpass import getuser
 import pygame
 from Game import Game, GameWorld, UP, DOWN, LEFT, RIGHT
-from Point import Point
+from engineering_notation import eng
 
 WORLD_DIR = "Worlds"
 SOKOBAN_INIT = "sokoban.init"
@@ -55,6 +60,14 @@ def main():
         with open(SOKOBAN_INIT, "w") as file:
             file.write(f"{world_i} {level_i}")
 
+    def check_for_manual_solution():
+        move_count = game.current_state.move_count
+        if game.solved() and (game.solution_state is None or move_count < game.solution_state.move_count):
+            game.solution_state = game.current_state
+            date_str = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+            game.solution_info = f"{date_str} Manually solved by {getuser()} in {move_count} moves."
+            world.update_solution(level_i, (game.solution_string(), game.solution_info))
+
     pygame.init()
     pygame.display.set_icon(pygame.image.load('Images/icon.png'))
     move_dict = {pygame.K_UP: UP, pygame.K_DOWN: DOWN, pygame.K_LEFT: LEFT, pygame.K_RIGHT: RIGHT}
@@ -72,6 +85,7 @@ def main():
             elif event.type == pygame.KEYDOWN:
                 if event.key in move_dict and not game.solved():
                     game.move(move_dict[event.key])
+                    check_for_manual_solution()
                 elif event.unicode == 'n':  # go to next level
                     if level_i < len(world.levels) - 1:
                         level_i += 1
@@ -142,7 +156,7 @@ def main():
                     game.solve()
                     if game.solution_state:
                         world.update_solution(level_i, (game.solution_string(), game.solution_info))
-                elif event.key == pygame.K_s and pygame.key.get_mods() & pygame.KMOD_META:
+                elif event.key == pygame.K_s and pygame.key.get_mods() & pygame.KMOD_META:  # save
                     world.save()
                 elif event.unicode == 'u':
                     game.undo()
@@ -161,21 +175,34 @@ def main():
                 # debug commands
                 elif event.key is pygame.K_a and pygame.key.get_mods() & pygame.KMOD_CTRL:
                     game.show_annotated_map = True
+                elif event.key is pygame.K_d and pygame.key.get_mods() & pygame.KMOD_CTRL:
+                    game.toggle_debug()
                 elif event.key is pygame.K_h and pygame.key.get_mods() & pygame.KMOD_CTRL:
-                    print(f"heuristic = {game.current_state.heuristic()}")
+                    time0 = time.time()
+                    heuristic = game.current_state.heuristic()
+                    dt = time.time() - time0
+                    print(f"heuristic = {heuristic} computed in {eng(dt, 2)}s")
+                elif event.key is pygame.K_m and pygame.key.get_mods() & pygame.KMOD_CTRL:
+                    print("Move Count Maps:")
+                    game.print_move_count_maps()
                 elif event.key is pygame.K_n and pygame.key.get_mods() & pygame.KMOD_CTRL:
                     print("Neighbors:")
                     for i, n in enumerate(game.current_state.neighbors()):
                         print(f"{i}: {len(n.previous_moves)} moves")
-                        n.full_map.print()
+                        print(n.full_map)
                     print("Done")
+                elif event.key is pygame.K_r and pygame.key.get_mods() & pygame.KMOD_CTRL:
+                    game.show_raw_map = True
                 elif event.key is pygame.K_s and pygame.key.get_mods() & pygame.KMOD_CTRL:
                     print(game.solution_string())
             elif event.type == pygame.KEYUP:
                 if event.key == pygame.K_a:
                     game.show_annotated_map = False
+                if event.key == pygame.K_r:
+                        game.show_raw_map = False
             elif event.type == pygame.MOUSEBUTTONDOWN and not game.solved():
                 game.move_to(pygame.mouse.get_pos())
+                check_for_manual_solution()
         pygame.display.update()
 
 

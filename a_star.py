@@ -13,7 +13,7 @@ See https://www.redblobgames.com/pathfinding/a-star/introduction.html
         neighbors   an iterator returning neighboring states
         is_goal     returns True if the state is a goal state
         heuristic   returns an underestimate of the number of moves to reach a goal state
-    max_cost        search terminates if the estimated cost exceeds max_cost
+    max_cost        search terminates if an underestimate of the cost exceeds max_cost
     max_time        search terminates if the search time exceeds max_time
     max_states      search terminates if the number of states visited exceeds max_states
     progress_report (progress_fn, progress_interval)
@@ -37,8 +37,8 @@ See https://www.redblobgames.com/pathfinding/a-star/introduction.html
     while not frontier.empty():
         current = frontier.pop()
         if current.is_goal():
-            return current, f"cost-minimal solution (cost = {current.cost()}) found in {eng(time.time() - time0, 2)}s" +\
-                   f" after examining {len(states_reached)} states."
+            return current, f"cost-optimal solution (cost = {current.cost()}) found in {eng(time.time() - time0, 2)}s" \
+                          + f" after examining {len(states_reached)} states."
         # These checks could be in the next_state loop
         if time.time() - time0 > max_time:
             termination_condition += f"Time limit ({max_time}s) exceeded."
@@ -68,7 +68,9 @@ See https://www.redblobgames.com/pathfinding/a-star/introduction.html
                 states_reached.append(next_state)
                 next_added = True
             if next_added:
-                # Todo: Note that a solution was reached if heuristic = 0
-                priority = next_state.cost() + next_state.heuristic()
+                h = next_state.heuristic()
+                # if h is 0:
+                #     print(f'Found a solution with cost = {next_state.cost()} (possibly non-optimal).')
+                priority = next_state.cost() + h
                 frontier.insert(next_state, priority)
     return None, "No solution."

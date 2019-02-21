@@ -1,6 +1,5 @@
 ; Title = World 1
-; Author = Zuanxia Deng
-; Transcribed from Sokoban Master for iPad
+; Transcribed from "Sokoban Master" for iPad, which was created by Zuanxia Deng
 
 Level 1
 ######
@@ -11,7 +10,7 @@ Level 1
   #   #
   #####
 ;Solution = uurDDlddrruLdlUUruLLdlU
-;Solution_info = 2019-02-05 17:49:05, solution with cost = 23 found in 4.0ms after examining 18 states.
+;Solution_info = 2019-02-19 15:15:00, cost-optimal solution (cost = 23) found in 5.8ms after examining 17 states.
 
 Level 2
 ######
@@ -22,7 +21,7 @@ Level 2
 ##    #
  ######
 ;Solution = uurrrDullddrdrruLLdlUUUruL
-;Solution_info = 2019-02-05 17:49:05, solution with cost = 26 found in 4.2ms after examining 18 states.
+;Solution_info = 2019-02-19 15:15:00, cost-optimal solution (cost = 26) found in 6.7ms after examining 18 states.
 
 Level 3
 #######
@@ -33,7 +32,7 @@ Level 3
 ###   #
   #####
 ;Solution = dlllddRRdrruLdlUUdlluurRurrdLLLrddlluU
-;Solution_info = 2019-02-05 17:49:05, solution with cost = 38 found in 6.9ms after examining 15 states.
+;Solution_info = 2019-02-19 15:15:00, cost-optimal solution (cost = 38) found in 8.3ms after examining 15 states.
 
 Level 4
 ###
@@ -44,7 +43,7 @@ Level 4
   ## @#
    ####
 ;Solution = ulluulldRurrDrddlUlUdrruLuLLdlUrrrddlUruL
-;Solution_info = 2019-02-05 17:49:05, solution with cost = 41 found in 17ms after examining 37 states.
+;Solution_info = 2019-02-19 15:15:00, cost-optimal solution (cost = 41) found in 13ms after examining 34 states.
 
 Level 5
 ####
@@ -56,7 +55,7 @@ Level 5
  ##  ###
   ####
 ;Solution = drrddlUUluurDldRRRlddrruruulDDrdLLdlU
-;Solution_info = 2019-02-05 17:49:05, solution with cost = 37 found in 7.0ms after examining 19 states.
+;Solution_info = 2019-02-19 15:15:00, cost-optimal solution (cost = 37) found in 13ms after examining 19 states.
 
 Level 6
 #####
@@ -65,8 +64,8 @@ Level 6
 # $  #
 ##   #
  #####
-;Solution = ldldRdrruLdlUluurrDLddrruLdlUlU
-;Solution_info = 2019-02-05 17:49:05, solution with cost = 31 found in 10ms after examining 29 states.
+;Solution = llddRdrruLdlUluurrDLddrruLdlUlU
+;Solution_info = 2019-02-19 15:15:00, cost-optimal solution (cost = 31) found in 7.5ms after examining 23 states.
 
 Level 7
  ######
@@ -76,7 +75,7 @@ Level 7
 # .####
 ####
 ;Solution = rdLuLulDlddrUluRRRdLulDrrrU
-;Solution_info = 2019-02-05 17:49:05, solution with cost = 27 found in 19ms after examining 40 states.
+;Solution_info = 2019-02-19 15:15:00, cost-optimal solution (cost = 27) found in 18ms after examining 40 states.
 
 Level 8
 #######
@@ -85,8 +84,8 @@ Level 8
 # $$  #
 ## @###
  ####
-;Solution = UruulllddRRUdlluurRdrrdLulullddrdrUruruLLLrrddlU
-;Solution_info = 2019-02-05 17:49:05, solution with cost = 48 found in 25ms after examining 40 states.
+;Solution = UruulllddRRUdlluurRdrrdLulullddrdrUrruuLLLrrddlU
+;Solution_info = 2019-02-19 15:15:00, cost-optimal solution (cost = 48) found in 24ms after examining 40 states.
 
 Level 9
  #####
@@ -96,7 +95,7 @@ Level 9
 #   ##
 #####
 ;Solution = dLdlluRdrUruullDRddlluRdrUrU
-;Solution_info = 2019-02-05 17:49:05, solution with cost = 28 found in 10ms after examining 29 states.
+;Solution_info = 2019-02-19 15:15:00, cost-optimal solution (cost = 28) found in 7.7ms after examining 23 states.
 
 Level 10
 #######
@@ -106,7 +105,7 @@ Level 10
   #  .#
   #####
 ;Solution = LDlluRRdrrddllUdrruulLulldRRddrruuuLLdRurDlllluRRRdrD
-;Solution_info = 2019-02-05 17:49:05, solution with cost = 53 found in 32ms after examining 61 states.
+;Solution_info = 2019-02-19 15:15:00, cost-optimal solution (cost = 53) found in 29ms after examining 59 states.
 
 Level 11
 #######
@@ -116,7 +115,7 @@ Level 11
 ####  #
    ####
 ;Solution = urRdrruulDllldRurrrddlUruLLLdRurrddlUruLLdlUdlU
-;Solution_info = 2019-02-05 17:49:05, solution with cost = 47 found in 24ms after examining 48 states.
+;Solution_info = 2019-02-19 15:15:00, cost-optimal solution (cost = 47) found in 21ms after examining 45 states.
 
 Level 12
 #######
@@ -125,8 +124,8 @@ Level 12
 # $   #
 ####  #
    ####
-;Solution = dRdrruulDllldRurrrddlUruLLLdlUrdRurrddlUruLL
-;Solution_info = 2019-02-05 17:49:05, solution with cost = 44 found in 21ms after examining 44 states.
+;Solution = dRdrruulDllldRurrrddlUruLLLdlUdrRurrddlUruLL
+;Solution_info = 2019-02-19 15:15:00, cost-optimal solution (cost = 44) found in 19ms after examining 43 states.
 
 Level 13
   #####
@@ -136,7 +135,7 @@ Level 13
 #.. ##
 #####
 ;Solution = lDurrdLdLruulDlDurrdLdLruulD
-;Solution_info = 2019-02-05 17:49:05, solution with cost = 28 found in 4.5ms after examining 11 states.
+;Solution_info = 2019-02-19 15:15:00, cost-optimal solution (cost = 28) found in 5.7ms after examining 11 states.
 
 Level 14
    ####
@@ -146,7 +145,7 @@ Level 14
 #. . ##
 ######
 ;Solution = LruulDlDurrdLdLLrruulD
-;Solution_info = 2019-02-05 17:49:05, solution with cost = 22 found in 2.8ms after examining 8 states.
+;Solution_info = 2019-02-19 15:15:01, cost-optimal solution (cost = 22) found in 3.6ms after examining 8 states.
 
 Level 15
    ####
@@ -157,7 +156,7 @@ Level 15
  #  #
  ####
 ;Solution = lDRddlUUrurrdLulDlluRRdrUdllddrUluurrdLulD
-;Solution_info = 2019-02-05 17:49:05, solution with cost = 42 found in 34ms after examining 54 states.
+;Solution_info = 2019-02-19 15:15:01, cost-optimal solution (cost = 42) found in 27ms after examining 49 states.
 
 Level 16
 #######
@@ -167,7 +166,7 @@ Level 16
 ##. @#
  #####
 ;Solution = lluuuRDrruLLdlddrUluRurrdLLdlluuRDDruruL
-;Solution_info = 2019-02-05 17:49:05, solution with cost = 40 found in 24ms after examining 51 states.
+;Solution_info = 2019-02-19 15:15:01, cost-optimal solution (cost = 40) found in 24ms after examining 51 states.
 
 Level 17
    ####
@@ -178,7 +177,7 @@ Level 17
 #.  #
 #####
 ;Solution = rrruulDrdLLdlluRuRDrruulDrdLLulDlddrrULuurrdLulDDrdL
-;Solution_info = 2019-02-05 17:49:05, solution with cost = 52 found in 41ms after examining 93 states.
+;Solution_info = 2019-02-19 15:15:01, cost-optimal solution (cost = 52) found in 16ms after examining 49 states.
 
 Level 18
  #######
@@ -188,7 +187,7 @@ Level 18
 # .$   #
 ########
 ;Solution = dddllLuRdrUlllldRRurrruulDrdLLLdlUUdrrruulDrddLLuR
-;Solution_info = 2019-02-05 17:49:06, solution with cost = 50 found in 410ms after examining 357 states.
+;Solution_info = 2019-02-19 15:15:01, cost-optimal solution (cost = 50) found in 210ms after examining 299 states.
 
 Level 19
 ########
@@ -200,7 +199,7 @@ Level 19
 #@ #   #
 ########
 ;Solution = UURlddrUUUUlDrdRRdrUUUruLL
-;Solution_info = 2019-02-05 17:49:07, solution with cost = 26 found in 1.4s after examining 1086 states.
+;Solution_info = 2019-02-19 15:15:01, cost-optimal solution (cost = 26) found in 230ms after examining 383 states.
 
 Level 20
 #####
@@ -214,5 +213,5 @@ Level 20
 #   #
 #####
 ;Solution = rrUUUddlluRUUluurrdL
-;Solution_info = 2019-02-05 17:49:07, solution with cost = 20 found in 27ms after examining 54 states.
+;Solution_info = 2019-02-19 15:15:01, cost-optimal solution (cost = 20) found in 28ms after examining 42 states.
 

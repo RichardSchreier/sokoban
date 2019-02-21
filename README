@@ -7,17 +7,19 @@ N/P     Next/previous unsolved level
 >/<     Next/previous world
 q       Quit
 r       Re-start
-s       If no solution, solve from the current state;
-        space   pause solve
-        esc     exit solve
-S       Solve from the initial state, even if a solution exists
+s       If no solution, solve from the current state.
+S       Solve from the initial state, even if a solution has been found. While the solver is running:
+            space   pause solve
+            esc     exit solve
 R       Replay solution
 u/U     Undo/Re-do
 mouse   Move worker to specified square; can push box adjacent to worker
 
 Debug
-^a      show NO_BOX squares
+^a      display annotated_map
+^d      toggle DEBUG flag; DEBUG==True prints debug messages during solve()
 ^h      print heuristic
+^m      print move_count_maps
 ^n      print neighbors
 ^s      print solution string
 
