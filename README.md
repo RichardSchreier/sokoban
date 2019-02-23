@@ -27,7 +27,7 @@ Debug
 ^s      print solution string
 ```
 
-# Installation
+## Install & Play
 1. Clone the repository `git clone https://github.com/RichardSchreier/sokoban.git`
 2. Run `pip install -r requirements.txt`
 3. Enjoy! `python3 sokoban.py`
