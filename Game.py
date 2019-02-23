@@ -168,23 +168,26 @@ class GameWorld:
                 summary_str = f"New solution of length {l1} found in {solution_time1}s"
             else:   # Compare against existing solution
                 old_solution = self.solutions[level_i]
-                l0 = len(old_solution[0])
-                solution_time0, states_searched0 = parse_solution_info(old_solution[1])
-                if l1 < l0:
-                    summary_str = f'New solution is shorter ({l1} vs. {l0}).'
-                elif l1 > l0:
-                    summary_str = f'New solution is longer ({l1} vs. {l0}).'
-                else:
-                    summary_str = f'Same solution length ({l1}).'
-                if solution_time0:
-                    solution_time_diff = (solution_time1 - solution_time0) / solution_time0
-                    summary_str += f' Solution time ({eng(solution_time1)}s) is '
-                    if solution_time_diff < -0.1:
-                        summary_str += f'{-solution_time_diff * 100:.0f}% faster.'
-                    elif solution_time_diff > 0.1:
-                        summary_str += f'{solution_time_diff * 100:.0f}% slower.'
+                if old_solution[0]:
+                    l0 = len(old_solution[0])
+                    solution_time0, states_searched0 = parse_solution_info(old_solution[1])
+                    if l1 < l0:
+                        summary_str = f'New solution is shorter ({l1} vs. {l0}).'
+                    elif l1 > l0:
+                        summary_str = f'New solution is longer ({l1} vs. {l0}).'
                     else:
-                        summary_str += f'essentially the same.'
+                        summary_str = f'Same solution length ({l1}).'
+                    if solution_time0:
+                        solution_time_diff = (solution_time1 - solution_time0) / solution_time0
+                        summary_str += f' Solution time ({eng(solution_time1)}s) is '
+                        if solution_time_diff < -0.1:
+                            summary_str += f'{-solution_time_diff * 100:.0f}% faster.'
+                        elif solution_time_diff > 0.1:
+                            summary_str += f'{solution_time_diff * 100:.0f}% slower.'
+                        else:
+                            summary_str += f'essentially the same.'
+                else:
+                    summary_str = "New solution."
             self.update_solution(level_i, solution)
             return summary_str
 
@@ -662,7 +665,7 @@ class GameState:
                             elif event.unicode == ' ':
                                 pause = not pause
 
-        return a_star(self, max_cost=1000, max_time=10 * 3600, max_states=200000, progress_report=(progress_fn, 0.5))
+        return a_star(self, max_cost=1000, max_time=3600, max_states=200000, progress_report=(progress_fn, 0.5))
 
 
 class GameMap:

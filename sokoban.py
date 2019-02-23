@@ -65,7 +65,7 @@ def main():
         if game.solved() and (game.solution_state is None or move_count < game.solution_state.move_count):
             game.solution_state = game.current_state
             date_str = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-            game.solution_info = f"{date_str} Manually solved by {getuser()} in {move_count} moves."
+            game.solution_info = f"{date_str}, manually solved by {getuser()} in {move_count} moves."
             world.update_solution(level_i, (game.solution_string(), game.solution_info))
 
     pygame.init()
