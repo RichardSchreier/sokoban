@@ -1,6 +1,10 @@
 # Sokoban game in Python
 With simple solver built on David Moreno's sokoban code.
 
+## Screenshots
+![Solved Image](https://raw.githubusercontent.com/RichardSchreier/sokoban/master/Solved.png "Solved")
+![Unsolved Image](https://raw.githubusercontent.com/RichardSchreier/sokoban/master/Unsolved.png "Unsolved")
+
 ## Actions
 ```
 Key     Action
