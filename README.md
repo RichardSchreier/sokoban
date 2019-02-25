@@ -1,6 +1,13 @@
-Sokoban game in python with simple solver built on David Moreno's sokoban code.
+# Sokoban game in Python
+With simple solver built on David Moreno's sokoban code.
 
-Key         Action
+## Screenshots
+![Solved Image](https://raw.githubusercontent.com/RichardSchreier/sokoban/master/Solved.png "Solved")
+![Unsolved Image](https://raw.githubusercontent.com/RichardSchreier/sokoban/master/Unsolved.png "Unsolved")
+
+## Actions
+```
+Key     Action
 ←↑↓→    Move worker left, up, down, right
 n/p     Next/previous level
 N/P     Next/previous unsolved level
@@ -22,6 +29,9 @@ Debug
 ^m      print move_count_maps
 ^n      print neighbors
 ^s      print solution string
+```
 
-To install pygame, use pip:
-pip install pygame
+## Install & Play
+1. Clone the repository `git clone https://github.com/RichardSchreier/sokoban.git`
+2. Run `pip install -r requirements.txt`
+3. Enjoy! `python3 sokoban.py`
