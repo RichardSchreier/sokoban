@@ -15,7 +15,7 @@ Level 1
   ####
 ;Solution = rdLuuuuulldRurDDDDlluRdrrddlUruLUUUruLdlluurDldRurDDDDrruLdlUlldRRRddlUruLullddRRuLruUUruLdlluurDldRurDDDrd\
 ; LddrU
-;Solution_info = 2019-02-09 10:31:31, solution with cost = 112 found in 94s after examining 6570 states.
+;Solution_info = 2019-02-09 10:31:31, cost-optimal solution (cost = 112) found in 94s after examining 6570 states.
 
 Level 2
 #####
@@ -27,7 +27,7 @@ Level 2
 #    ###
 ######
 ;Solution = ldRRddddllluurRllddrrUrrruuuLLdDLdRuuuLDDrddllluuRRllddrrUrUdldlluurRuurrrdddLruuulllulldRR
-;Solution_info = 2019-02-09 10:32:59, solution with cost = 91 found in 2.7s after examining 1147 states.
+;Solution_info = 2019-02-09 10:32:59, cost-optimal solution (cost = 91) found in 2.7s after examining 1147 states.
 
 Level 3
    #####
@@ -42,7 +42,7 @@ Level 3
    ####
 ;Solution = LLUUddrruLUULLLrrdrddlUUruLLuuurrdDDllulllddrUluRRldddrdRRurrdLuluurDlulLullddrUddrdrdrUUUruLLLrrdddllululu\
 ; uRDrrrdddrruLdlUUruLLULrdrruuullD
-;Solution_info = 2019-02-12 14:54:44, solution with cost = 140 found in 360s after examining 12283 states.
+;Solution_info = 2019-02-12 14:54:44, cost-optimal solution (cost = 140) found in 360s after examining 12283 states.
 
 Level 4
 #### ####
@@ -54,6 +54,9 @@ Level 4
   #..*.@.#
   ##   ###
    #####
+;Solution = uuuuulDrddddlLuLullUdrruuRRurDDDlUdrDrdLLdllUlURuuurRurDDDDuululldLDlluRRdrddlUdrdrruRuuuulllDDLddrRlluurDl\
+; dRuululldRRulluurDDldRurDDuurDD
+;Solution_info = 2019-02-24 01:37:26, cost-optimal solution (cost = 138) found in 12ks after examining 70381 states.
 
 Level 5
 ###### ####
@@ -132,7 +135,7 @@ Level 10
  #######
 ;Solution = luuurrrrDulldRlulldRlddrUUluururrrrrdrdddlddldllllUluuurUrrdLrurrdLLulllddddrdrrrruruuruuululllllDldddrDulu\
 ; uRDlddrrrrUUluLrdrddlllluuuururrrrrdrdddlddldllllUluuurUrrdLrrruLLL
-;Solution_info = 2019-02-09 13:07:57, solution with cost = 174 found in 51s after examining 5169 states.
+;Solution_info = 2019-02-09 13:07:57, cost-optimal solution (cost = 174) found in 51s after examining 5169 states.
 
 Level 11
  #########
@@ -159,6 +162,8 @@ Level 12
 # .$. #
 #  #  #
 #######
+;Solution = rrdLdLDrDDuullDDRUluRuruulDDDlddrUrUUlDrdrdLrddlUUUUllddlddrURlluurDRluurrdLuuuurrdLulDDDlDuruuulldR
+;Solution_info = 2019-02-26 21:51:35, cost-optimal solution (cost = 100) found in 30ks after examining 105525 states.
 
 Level 13
     #####
@@ -182,7 +187,7 @@ Level 14
   ##    # #######
    ######
 ;Solution = rUrrdrdLuulldRlllLuLullllddrdrdrdrrruUluRlululldRRldRdrruRRurrDLLLrrrrddlUruLdrrdrruululululllDD
-;Solution_info = 2019-02-09 13:44:55, solution with cost = 96 found in 420s after examining 15681 states.
+;Solution_info = 2019-02-09 13:44:55, cost-optimal solution (cost = 96) found in 420s after examining 15681 states.
 
 Level 15
 #######

@@ -411,6 +411,9 @@
 # .....       #
 ###############
 ; 36
+;Solution = ldlllllllllluurDldRRRRuLLdlluurDldRRurrdRRuLLLLdRRurrdRRuLLLLdRRlluLdllluurDldRRRRulLdlluurDldRRurrrrrrRRdr\
+; ruLLLLLLLLLLdlluurDrrrdLrurrdLLrrurrdLLLrrrurrdLLLL
+;Solution_info = 2019-02-23 21:33:03, cost-optimal solution (cost = 158) found in 9.9ks after examining 66168 states.
 
       ###
 ##### #.#
@@ -925,6 +928,9 @@
  ##     ###
   #######
 ; 78
+;Solution = uUrRuurrdDDuuullddRlllddrrrRRRlluUlluurrDDDullllddrrrRRluulluRurDDDullllddrrrdrruLLruuuullllDRRRurDDDulllul\
+; ldRddrdrruRldlluRlluuRRRurDD
+;Solution_info = 2019-02-23 23:07:31, cost-optimal solution (cost = 135) found in 5.7ks after examining 41738 states.
 
  #########
  #    #  #
@@ -1199,7 +1205,7 @@
 ;Solution = lldlluuuullLLLuLulldRDRRRRRRurDDDDldRRRRdrUlllluuuullllllluurDldRRRRRRurDDDDldRRRdrUllluuuullllllDDrddlUUUU\
 ; luurDldRRRRRRurDDDDldRRRlluuuulllllldddlluRUruulldRRRRRRRurDDDDldRuuuulllllldlddrUUluRRRRRRurDDDlddrUUUUdddddrruLdlUU\
 ; UUdddrrdrruLLLdlUUUddrrrrruulDrdLLLLdlUUdrruRdrruulDrdLLLLdlU
-;Solution_info = 2019-02-21 00:01:24, cost-optimal solution (cost = 285) found after 211 manual moves by richardschreier
+;Solution_info = 2019-02-21 00:01:24, solution (cost = 285) found after 211 manual moves by richardschreier
 
                #####
                #   #
@@ -1329,6 +1335,10 @@
 ##   #########
  #####
 ; 108
+;Solution = rrrrdrruRdrrUruuLullDDDRdLLLLLLulllddrrUdlluurRRdrrrruruuurrdLulDDDuurrrddLLdLLLLLLulllddrrUrrrrrrrruUruLul\
+; lddDrdLLLLLLuLLruulldlddrUUluRddddrrUruLLrddlluUrrrdrrrrurrruuLulDDDrdLLLLLLulllUdddrrUruLLrddlluluurDrrrdrruLLLLLulu\
+; urDldDrrruuLLulD
+;Solution_info = 2019-02-26 04:56:18, cost-optimal solution (cost = 240) found in 50ks after examining 123883 states.
 
   #######
 # #     #
@@ -1401,6 +1411,9 @@
         #  #
         ####
 ; 113
+;Solution = rRRddrRDululuurDrDLdlUruLLLdlUUUdllluurruurrddLdddrrrddrdrrULdlUUrdrruLLuLLLLdlUrrrddrUddddrUUUruLuLLLLuLLL\
+; rrrddlUrrrddrUruLLLLuLDuuuruulldldRlldlddrUrRllluurDldR
+;Solution_info = 2019-03-01 00:14:32, cost-optimal solution (cost = 162) found in 26ks after examining 90246 states.
 
 ######
 #    ###
@@ -1412,6 +1425,10 @@
 ##   ######
  #####
 ; 114
+;Solution = ruLddddLrurrdLrurrdLullllddllUUUURRllluurrrDrDDuululllddrrRuullDldRddddrruLruRRdLurRRdLulldLdllUUUUluurrrdr\
+; DDuluulllddrddddrruuRRRdLullddlluuuuRRurDDuulullDldRddddrruLruRRdLLdllUUUURRurDDuulullDldRddddrruuRdldlluRdrUlluuuRRu\
+; rDD
+;Solution_info = 2019-03-01 14:15:54, cost-optimal solution (cost = 227) found in 50ks after examining 138427 states.
 
     #####
 #####   ####
@@ -1660,6 +1677,9 @@
 ####   ###
    #####
 ; 133
+;Solution = uurrrrrdddLLulLrrddllULUUddrdrrurruuullllulldRRldddrdrruulLdlUUdrrrdrruuullulldRRllulldRddrrrdrruLLLLdlUUUl\
+; uRRRllddddrdrUruLLdlUUUluRdRlddlldRRRdrUruLLdlUU
+;Solution_info = 2019-03-05 02:33:01, cost-optimal solution (cost = 155) found in 15ks after examining 74746 states.
 
         ####
 #########  #
@@ -1672,6 +1692,10 @@
   #  #######
   ####
 ; 134
+;Solution = rurrdLLrrrruUUUruulDDDDDrdLLLuuluuuRRlldllLulldRRRRddddLdlUUUUdddrrurrdrruuuuruulDlllDDullLulldRRRRdrDrddLL\
+; LdlUUUUdddrrrrrruuuUruulDlllDurrrDDDDrdLLLLUruuLullLulldRRRRDDRddLLdlUUUUdddrrrrrruuuuulllDllLulldRRRRdRdddlUUrddrrru\
+; uuuulllDDDlddrruLdlU
+;Solution_info = 2019-03-05 06:56:04, cost-optimal solution (cost = 244) found in 16ks after examining 88551 states.
 
 #######
 #     #####
@@ -1709,6 +1733,9 @@
  #      #
  ########
 ; 137
+;Solution = uuurRlldddrrUULulDDurrdrruLLddlLLrdddlluuluurDrrrruuLuurDllDDurRddlLLLDlUrrrrrurruuLrdLLLulDDuururDrdLddlLL\
+; LuLLrrddlUrrrrruuLulDDurrddlLLLrrdddllUdllluuuluurDrRDrrrdddllllluuUluRR
+;Solution_info = 2019-03-05 11:21:30, cost-optimal solution (cost = 179) found in 16ks after examining 75099 states.
 
   ####
 ###  #
@@ -1747,6 +1774,10 @@
 ##    #
  ######
 ; 140
+;Solution = ddrrRuRuRuRurrdLdLdLdLLLLulldRuuulllddddrdrrruUrrrrururuulDlDlDururrdLdLdLLLLUlldRurUluurrdLulDlllddddrdrrr\
+; uUrrrruruulDlDurrdLdLLLLUUdlldRuluullddddrdrrruUrrrruulDrdLLLLUlldRurDulluurDuurrdLulDldddrruULulllddddrdrrrUUUdlluUr\
+; uLLulDDDDuuurrrurrdLLLLulDDDuurrdddrUrULdlUruLLulDDurrrurrdLLLLulD
+;Solution_info = 2019-03-07 07:44:15, cost-optimal solution (cost = 290) found in 16ks after examining 73251 states.
 
   ########
   #  # . #
@@ -1758,6 +1789,9 @@
 #   @#   #
 ##########
 ; 141
+;Solution = luurrrddrruLruLLLLUUluurDrrRDDDrddlUUUUUdddlllLddlluuRRRRRlluUluurDrrrddDrddllUdrUUUUddLLLLddlluuRRRRRdrUUd\
+; llllddlUluRRRRRdrUllluUluRR
+;Solution_info = 2019-03-07 08:09:04, cost-optimal solution (cost = 134) found in 1.5ks after examining 33458 states.
 
   ####
   #  #
@@ -1891,6 +1925,9 @@
 ###  ####..#
   ####  ####
 ; 151
+;Solution = llulURdrUUULuurDDDDDldRRRRurrddlUruLdllllldlUlluuuruRRurDDDDldRRRRRurDllllluullDuUlldddrRRRRRRRlllluulluluR\
+; RurDDDDldRRRRluRRD
+;Solution_info = 2019-03-11 14:40:00, cost-optimal solution (cost = 125) found in 5.4ks after examining 50701 states.
 
 ###### ####
 #     #    #
