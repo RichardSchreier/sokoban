@@ -665,7 +665,7 @@ class GameState:
                             elif event.unicode == ' ':
                                 pause = not pause
 
-        return a_star(self, max_cost=1000, max_time=3600, max_states=200000, progress_report=(progress_fn, 0.5))
+        return a_star(self, max_cost=1000, max_time=10 * 3600, max_states=1000000, progress_report=(progress_fn, 0.5))
 
 
 class GameMap:

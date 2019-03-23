@@ -8,11 +8,13 @@ N/P     Next/previous unsolved level
 >/<     Next/previous level file
 q       Quit
 r       Re-start
+R       Replay solution
 s       If no solution, solve from the current state.
-S       Solve from the initial state, even if a solution has been found. While the solver is running:
+S       Solve from the initial state, even if a solution has been found.
+        While the solver is running:
             space   pause solve
             esc     exit solve
-R       Replay solution
+cmd-S   Save the solution as a comment in the world file
 u/U     Undo/Re-do
 mouse   Move worker to specified square, can push box adjacent to worker
 
@@ -79,7 +81,7 @@ def main():
     while 1:
         game.display()
         for event in pygame.event.get():
-            if event.type == pygame.QUIT or event.type == pygame.KEYDOWN and event.key in (pygame.K_q, pygame.K_ESCAPE):
+            if event.type == pygame.QUIT or event.type == pygame.KEYDOWN and event.key is pygame.K_q:
                 save_world_i_and_level_i()
                 return
             elif event.type == pygame.KEYDOWN:
